@@ -1,0 +1,3 @@
+[submodule "online-shopping-system"]
+	path = online-shopping-system
+	url = https://github.com/saad0510/online-shopping-system.git
