@@ -1,0 +1,7 @@
+<map id="Admin::Admin" name="Admin::Admin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,109,32"/>
+<area shape="rect" id="Node000002" href="$class_employee.html#a796adf8933476e9145ee99dfda384f7c" title=" " alt="" coords="157,5,302,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,16,141,16,141,21,109,21"/>
+<area shape="rect" id="Node000003" href="$class_person.html#adf14a4abb4d6721c89729ef315792f0c" title=" " alt="" coords="350,5,461,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="302,16,335,16,335,21,302,21"/>
+</map>

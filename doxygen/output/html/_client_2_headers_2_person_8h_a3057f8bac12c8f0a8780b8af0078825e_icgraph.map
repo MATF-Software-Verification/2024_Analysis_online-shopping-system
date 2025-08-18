@@ -1,0 +1,12 @@
+<map id="welcome" name="welcome">
+<area shape="rect" id="Node000001" title=" " alt="" coords="401,31,475,57"/>
+<area shape="rect" id="Node000002" href="$client_program_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="123,5,172,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="386,42,173,23,173,18,386,37"/>
+<area shape="rect" id="Node000003" href="$class_customer.html#a16659692b75f601cd559a71c12b90f7b" title=" " alt="" coords="241,56,353,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="386,56,354,62,353,57,385,51"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="240,53,172,29,174,24,242,48"/>
+<area shape="rect" id="Node000004" href="$server_program_8cpp.html#a90ddba8bc775cabf777f7824dd3c2b15" title=" " alt="" coords="103,56,193,83"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="225,72,193,72,193,67,225,67"/>
+<area shape="rect" id="Node000005" href="$server_program_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+</map>

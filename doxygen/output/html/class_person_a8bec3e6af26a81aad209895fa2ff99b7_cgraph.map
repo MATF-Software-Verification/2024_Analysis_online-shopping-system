@@ -1,0 +1,6 @@
+<map id="Person::input_name" name="Person::input_name">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,143,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="42,30,36,21,40,11,53,5,74,3,97,5,109,12,106,16,95,10,74,8,54,10,44,15,41,20,46,27"/>
+<area shape="rect" id="Node000002" href="$class_person.html#ac0fb249510a77ecc1067b3bc339ebf9b" title=" " alt="" coords="191,29,335,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,40,175,40,175,45,143,45"/>
+</map>

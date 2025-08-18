@@ -1,0 +1,6 @@
+<map id="Customer" name="Customer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,84,107"/>
+<area shape="rect" id="Node000002" href="$class_person.html" title=" " alt="" coords="13,5,76,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="38,47,40,79,35,80,33,48"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="56,48,54,80,49,79,51,47"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="Person::login" name="Person::login">
+<area shape="rect" id="Node000001" title=" " alt="" coords="401,81,499,108"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="476,68,467,62,450,60,434,62,426,66,424,72,428,80,423,82,419,73,422,63,433,57,450,55,469,57,479,64"/>
+<area shape="rect" id="Node000002" href="$class_person.html#a30f0de3621ffaa4ce806003ddee10443" title=" " alt="" coords="248,5,346,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="406,76,325,35,327,30,409,71"/>
+<area shape="rect" id="Node000003" href="$client_program_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="123,81,172,108"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="386,97,173,97,173,92,386,92"/>
+<area shape="rect" id="Node000004" href="$server_program_8cpp.html#a90ddba8bc775cabf777f7824dd3c2b15" title=" " alt="" coords="103,144,193,171"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="418,119,388,135,354,148,312,157,269,162,194,163,193,157,269,156,311,152,353,143,385,130,415,114"/>
+<area shape="rect" id="Node000006" href="$class_customer.html#a16659692b75f601cd559a71c12b90f7b" title=" " alt="" coords="241,107,353,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="386,108,354,113,353,108,385,103"/>
+<area shape="rect" id="Node000005" href="$server_program_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,144,55,171"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="87,160,55,160,55,155,87,155"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="225,110,172,101,173,96,226,105"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="227,140,194,149,193,144,226,135"/>
+</map>

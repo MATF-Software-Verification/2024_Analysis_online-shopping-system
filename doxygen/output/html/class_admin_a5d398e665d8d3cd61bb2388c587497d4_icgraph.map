@@ -1,0 +1,8 @@
+<map id="Admin::balance" name="Admin::balance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="165,31,276,57"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="247,18,238,12,220,9,204,11,195,16,193,21,197,29,193,31,188,22,191,12,202,6,220,4,240,7,250,13"/>
+<area shape="rect" id="Node000002" href="$class_admin.html#a61a870542826b32336b9611a114251fb" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="149,35,116,30,117,25,150,30"/>
+<area shape="rect" id="Node000003" href="$class_admin.html#a4ae2556b93d36a0e93d3ddd4485a865c" title=" " alt="" coords="12,56,110,83"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="150,58,111,64,110,59,149,53"/>
+</map>

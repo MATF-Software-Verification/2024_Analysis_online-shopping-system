@@ -1,0 +1,6 @@
+<map id="Person::input_CNIC" name="Person::input_CNIC">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,145,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="42,30,37,21,41,11,54,5,75,3,98,5,110,12,107,16,96,10,75,8,55,10,44,15,42,20,47,27"/>
+<area shape="rect" id="Node000002" href="$class_person.html#adbe029eb7bf75cd01ec839272ee7df8d" title=" " alt="" coords="193,29,339,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,40,177,40,177,45,145,45"/>
+</map>
