@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.16.0"/>
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;ctime&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;ctime&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;conio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;conio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="8" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="9" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="10" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;ws2tcpip.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;ws2tcpip.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Server.h" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Thread.h" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;windows.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;windows.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Thread.h" line="4" column="0"/>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="0" column="0"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Thread::data&apos; is not initialized in the constructor." verbose="Member variable &apos;Thread::data&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Thread.h" line="18" column="5"/>
+            <symbol>Thread::data</symbol>
+        </error>
+        <error id="noConstructor" severity="style" msg="The class &apos;Goods&apos; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &apos;Goods&apos; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Goods.h" line="6" column="1"/>
+            <symbol>Goods</symbol>
+        </error>
+        <error id="noConstructor" severity="style" msg="The class &apos;Cash&apos; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &apos;Cash&apos; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Cash.h" line="3" column="1"/>
+            <symbol>Cash</symbol>
+        </error>
+        <error id="initializerList" severity="style" msg="Member variable &apos;Server::m_port&apos; is in the wrong place in the initializer list." verbose="Member variable &apos;Server::m_port&apos; is in the wrong place in the initializer list. Members are initialized in the order they are declared, not in the order they are in the initializer list. Keeping the initializer list in the same order that the members were declared prevents order dependent initialization errors." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Server.h" line="30" column="20"/>
+            <location file="..\online-shopping-system\Server\Headers\Server.h" line="17" column="66"/>
+            <symbol>Server::m_port</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Admin::view&apos; can be const." verbose="The member function &apos;Admin::view&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.h" line="10" column="10"/>
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="104" column="13"/>
+            <symbol>Admin::view</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Admin::accounts&apos; can be const." verbose="The member function &apos;Admin::accounts&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.h" line="15" column="10"/>
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="425" column="13"/>
+            <symbol>Admin::accounts</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Cash::get_final_cash&apos; can be const." verbose="The member function &apos;Cash::get_final_cash&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Cash.h" line="9" column="16"/>
+            <location file="..\online-shopping-system\Server\Headers\Cash.h" line="28" column="21"/>
+            <symbol>Cash::get_final_cash</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Server&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Server&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Server.h" line="17" column="5"/>
+            <symbol>Server</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Employee&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Employee&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Employee.h" line="11" column="9"/>
+            <symbol>Employee</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Admin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Admin&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.h" line="19" column="9"/>
+            <symbol>Admin</symbol>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="110" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ans&apos; can be reduced." verbose="The scope of the variable &apos;ans&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="8" column="9"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ans&apos; can be reduced." verbose="The scope of the variable &apos;ans&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="129" column="9"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;search&apos; argument 1 names different: declaration &apos;str&apos; definition &apos;key&apos;." verbose="Function &apos;search&apos; argument 1 names different: declaration &apos;str&apos; definition &apos;key&apos;." cwe="628" inconclusive="true" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="167" column="34"/>
+            <location file="..\online-shopping-system\Server\Headers\Admin.h" line="12" column="31"/>
+            <symbol>search</symbol>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;-&apos;, result is not used." verbose="Found suspicious operator &apos;-&apos;, result is not used." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="372" column="17"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.h" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.h" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.h" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.h" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.h" line="7" column="0"/>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Complaint_Base::view&apos; can be const." verbose="The member function &apos;Complaint_Base::view&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Complaint_Base.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.h" line="29" column="10"/>
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.cpp" line="50" column="22"/>
+            <symbol>Complaint_Base::view</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Complaint_Base::see&apos; can be const." verbose="The member function &apos;Complaint_Base::see&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Complaint_Base.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.h" line="30" column="10"/>
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.cpp" line="65" column="22"/>
+            <symbol>Complaint_Base::see</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Complaint_Base&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Complaint_Base&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Server/Headers/Complaint_Base.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.h" line="26" column="5"/>
+            <symbol>Complaint_Base</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;previous&apos; can be reduced." verbose="The scope of the variable &apos;previous&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Complaint_Base.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.cpp" line="76" column="12"/>
+            <symbol>previous</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;previous&apos; can be reduced." verbose="The scope of the variable &apos;previous&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Complaint_Base.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_Base.cpp" line="113" column="12"/>
+            <symbol>previous</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Complaint_E::clear&apos; can be const." verbose="The member function &apos;Complaint_E::clear&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Complaint_E.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_E.h" line="11" column="10"/>
+            <location file="..\online-shopping-system\Server\Headers\Complaint_E.cpp" line="57" column="19"/>
+            <symbol>Complaint_E::clear</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Complaint_E&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Complaint_E&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Server/Headers/Complaint_E.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_E.h" line="7" column="5"/>
+            <symbol>Complaint_E</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;previous&apos; can be reduced." verbose="The scope of the variable &apos;previous&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Complaint_E.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Complaint_E.cpp" line="13" column="12"/>
+            <symbol>previous</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Customer&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Customer&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Server/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Customer.h" line="11" column="9"/>
+            <symbol>Customer</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ans&apos; can be reduced." verbose="The scope of the variable &apos;ans&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Customer.cpp" line="69" column="9"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Server/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Employee.cpp" line="139" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ans&apos; can be reduced." verbose="The scope of the variable &apos;ans&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Employee.cpp" line="8" column="9"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ans&apos; can be reduced." verbose="The scope of the variable &apos;ans&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Employee.cpp" line="47" column="9"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;ans&apos; shadows outer variable" verbose="Local variable &apos;ans&apos; shadows outer variable" cwe="398" file0="../online-shopping-system/Server/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Employee.cpp" line="99" column="33" info="Shadow variable"/>
+            <location file="..\online-shopping-system\Server\Headers\Employee.cpp" line="47" column="9" info="Shadowed declaration"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="0" column="0"/>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::transfer_to_file&apos; can be const." verbose="The member function &apos;Person::transfer_to_file&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="46" column="14"/>
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="27" column="14"/>
+            <symbol>Person::transfer_to_file</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Person::initialize_goods&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Person::initialize_goods&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="52" column="14"/>
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="141" column="14"/>
+            <symbol>Person::initialize_goods</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Person::initialize_cash&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Person::initialize_cash&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="54" column="14"/>
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="211" column="14"/>
+            <symbol>Person::initialize_cash</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Person::update_goods&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Person::update_goods&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="55" column="14"/>
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="244" column="14"/>
+            <symbol>Person::update_goods</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Person::update_cash&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Person::update_cash&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="57" column="14"/>
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="301" column="14"/>
+            <symbol>Person::update_cash</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ans&apos; can be reduced." verbose="The scope of the variable &apos;ans&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="322" column="27"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;Balance&apos; can be reduced." verbose="The scope of the variable &apos;Balance&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="324" column="12"/>
+            <symbol>Balance</symbol>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;+&apos;, result is not used." verbose="Found suspicious operator &apos;+&apos;, result is not used." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="401" column="30"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;-&apos;, result is not used." verbose="Found suspicious operator &apos;-&apos;, result is not used." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="417" column="42"/>
+        </error>
+        <error id="constParameterReference" severity="style" msg="Parameter &apos;cash&apos; can be declared as reference to const" verbose="Parameter &apos;cash&apos; can be declared as reference to const" cwe="398" file0="../online-shopping-system/Server/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Person.cpp" line="301" column="32" info="Parameter &apos;cash&apos; can be declared as reference to const"/>
+            <symbol>cash</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;ctime&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;ctime&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="4" column="0"/>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Server::updateActivity&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Server::updateActivity&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Server.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Server.h" line="43" column="10"/>
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="157" column="14"/>
+            <symbol>Server::updateActivity</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Server::getActivity&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Server::getActivity&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Server.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Server.h" line="44" column="17"/>
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="177" column="21"/>
+            <symbol>Server::getActivity</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Server::closeSocket&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Server::closeSocket&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to an unnamed namespace." cwe="398" inconclusive="true" file0="../online-shopping-system/Server/Headers/Server.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Server.h" line="45" column="10"/>
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="193" column="14"/>
+            <symbol>Server::closeSocket</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="../online-shopping-system/Server/Headers/Server.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="47" column="27"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="../online-shopping-system/Server/Headers/Server.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="168" column="26"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;dt&apos; can be declared as pointer to const" verbose="Variable &apos;dt&apos; can be declared as pointer to const" cwe="398" file0="../online-shopping-system/Server/Headers/Server.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Server.cpp" line="170" column="11" info="Variable &apos;dt&apos; can be declared as pointer to const"/>
+            <symbol>dt</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Thread.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;sstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;sstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Server\Headers\Thread.cpp" line="4" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Rec&apos; argument 1 names different: declaration &apos;receivingString&apos; definition &apos;str&apos;." verbose="Function &apos;Rec&apos; argument 1 names different: declaration &apos;receivingString&apos; definition &apos;str&apos;." cwe="628" inconclusive="true" file0="../online-shopping-system/Server/Headers/Thread.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Thread.cpp" line="98" column="30"/>
+            <location file="..\online-shopping-system\Server\Headers\Thread.h" line="43" column="26"/>
+            <symbol>Rec</symbol>
+        </error>
+        <error id="constParameterReference" severity="style" msg="Parameter &apos;Client&apos; can be declared as reference to const" verbose="Parameter &apos;Client&apos; can be declared as reference to const" cwe="398" file0="../online-shopping-system/Server/Headers/Thread.cpp">
+            <location file="..\online-shopping-system\Server\Headers\Thread.cpp" line="20" column="28" info="Parameter &apos;Client&apos; can be declared as reference to const"/>
+            <symbol>Client</symbol>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="../online-shopping-system/Server/serverProgram.cpp">
+            <location file="..\online-shopping-system\Server\serverProgram.cpp" line="0" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="6" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;ctime&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;ctime&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;conio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;conio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="8" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstdio&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="9" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cstring&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="10" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;ws2tcpip.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;ws2tcpip.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Client.h" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Client.h" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;sstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;sstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Client.h" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\Headers\Client.h" line="6" column="0"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Person::sex&apos; is not initialized in the constructor." verbose="Member variable &apos;Person::sex&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="82" column="9"/>
+            <symbol>Person::sex</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Person::age&apos; is not initialized in the constructor." verbose="Member variable &apos;Person::age&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="82" column="9"/>
+            <symbol>Person::age</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Person::DOB&apos; is not initialized in the constructor." verbose="Member variable &apos;Person::DOB&apos; is not initialized in the constructor. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="82" column="9"/>
+            <symbol>Person::DOB</symbol>
+        </error>
+        <error id="noConstructor" severity="style" msg="The class &apos;Goods&apos; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &apos;Goods&apos; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Goods.h" line="6" column="1"/>
+            <symbol>Goods</symbol>
+        </error>
+        <error id="noConstructor" severity="style" msg="The class &apos;Cash&apos; does not declare a constructor although it has private member variables which likely require initialization." verbose="The class &apos;Cash&apos; does not declare a constructor although it has private member variables which likely require initialization. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Cash.h" line="3" column="1"/>
+            <symbol>Cash</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Admin::Delete&apos; can be const." verbose="The member function &apos;Admin::Delete&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.h" line="13" column="10"/>
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="255" column="13"/>
+            <symbol>Admin::Delete</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Cash::get_final_cash&apos; can be const." verbose="The member function &apos;Cash::get_final_cash&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Cash.h" line="9" column="16"/>
+            <location file="..\online-shopping-system\Client\Headers\Cash.h" line="26" column="21"/>
+            <symbol>Cash::get_final_cash</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Client&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Client&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Client.h" line="12" column="5"/>
+            <symbol>Client</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Employee&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Employee&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.h" line="10" column="9"/>
+            <symbol>Employee</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Admin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Admin&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.h" line="19" column="9"/>
+            <symbol>Admin</symbol>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="35" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="119" column="13"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="155" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="166" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="189" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="249" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="262" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="282" column="13"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="295" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="318" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="327" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="344" column="29"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="365" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="387" column="29"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="402" column="29"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="417" column="29"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="438" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="451" column="5"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;search&apos; argument 1 names different: declaration &apos;str&apos; definition &apos;key&apos;." verbose="Function &apos;search&apos; argument 1 names different: declaration &apos;str&apos; definition &apos;key&apos;." cwe="628" inconclusive="true" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="233" column="34"/>
+            <location file="..\online-shopping-system\Client\Headers\Admin.h" line="12" column="31"/>
+            <symbol>search</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: index" verbose="Unused variable: index" cwe="563" file0="../online-shopping-system/Client/Headers/Admin.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Admin.cpp" line="309" column="19"/>
+            <symbol>index</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected." cwe="398" file0="../online-shopping-system/Client/Headers/Client.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Client.cpp" line="33" column="25"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Rec&apos; argument 1 names different: declaration &apos;receivingString&apos; definition &apos;str&apos;." verbose="Function &apos;Rec&apos; argument 1 names different: declaration &apos;receivingString&apos; definition &apos;str&apos;." cwe="628" inconclusive="true" file0="../online-shopping-system/Client/Headers/Client.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Client.cpp" line="56" column="30"/>
+            <location file="..\online-shopping-system\Client\Headers\Client.h" line="20" column="26"/>
+            <symbol>Rec</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Customer&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Customer&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.h" line="11" column="9"/>
+            <symbol>Customer</symbol>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="21" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="46" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="80" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="112" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="132" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="140" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="150" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="160" column="13"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="168" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="183" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Customer.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Customer.cpp" line="195" column="13"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="20" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="71" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="81" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="93" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="103" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="116" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="126" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="131" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="140" column="17"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="149" column="13"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="157" column="13"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="164" column="13"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="175" column="13"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;ans&apos; shadows outer variable" verbose="Local variable &apos;ans&apos; shadows outer variable" cwe="398" file0="../online-shopping-system/Client/Headers/Employee.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="123" column="30" info="Shadow variable"/>
+            <location file="..\online-shopping-system\Client\Headers\Employee.cpp" line="56" column="9" info="Shadowed declaration"/>
+            <symbol>ans</symbol>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="0" column="0"/>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::transfer&apos; can be const." verbose="The member function &apos;Person::transfer&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="59" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="373" column="14"/>
+            <symbol>Person::transfer</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::check_name&apos; can be const." verbose="The member function &apos;Person::check_name&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="62" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="36" column="14"/>
+            <symbol>Person::check_name</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::check_age&apos; can be const." verbose="The member function &apos;Person::check_age&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="63" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="62" column="14"/>
+            <symbol>Person::check_age</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::check_sex&apos; can be const." verbose="The member function &apos;Person::check_sex&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="64" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="90" column="14"/>
+            <symbol>Person::check_sex</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::check_DOB&apos; can be const." verbose="The member function &apos;Person::check_DOB&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="65" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="112" column="14"/>
+            <symbol>Person::check_DOB</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::check_CNIC&apos; can be const." verbose="The member function &apos;Person::check_CNIC&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="66" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="214" column="14"/>
+            <symbol>Person::check_CNIC</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::check_email&apos; can be const." verbose="The member function &apos;Person::check_email&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="67" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="266" column="14"/>
+            <symbol>Person::check_email</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::check_phone_num&apos; can be const." verbose="The member function &apos;Person::check_phone_num&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="68" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="301" column="14"/>
+            <symbol>Person::check_phone_num</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Person::check_password&apos; can be const." verbose="The member function &apos;Person::check_password&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="69" column="14"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="345" column="14"/>
+            <symbol>Person::check_password</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;age&gt;=0&apos; is always true" verbose="Condition &apos;age&gt;=0&apos; is always true" cwe="571" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="68" column="22" info="Condition &apos;age&gt;=0&apos; is always true"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="66" column="17" info="Assuming that condition &apos;age&lt;0&apos; is not redundant"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="28" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="54" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="82" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="103" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="206" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="258" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="293" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="319" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="394" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="427" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="441" column="5"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="465" column="9"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="480" column="25"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="495" column="21"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="530" column="17"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="326" column="10"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="351" column="7"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="397" column="10"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;age&apos; shadows outer variable" verbose="Local variable &apos;age&apos; shadows outer variable" cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="181" column="9" info="Shadow variable"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="44" column="13" info="Shadowed declaration"/>
+            <symbol>age</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;t&apos; can be declared as pointer to const" verbose="Variable &apos;t&apos; can be declared as pointer to const" cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="177" column="9" info="Variable &apos;t&apos; can be declared as pointer to const"/>
+            <symbol>t</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::all_of or std::none_of algorithm instead of a raw loop." verbose="Consider using std::all_of or std::none_of algorithm instead of a raw loop." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="39" column="2"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::all_of or std::none_of algorithm instead of a raw loop." verbose="Consider using std::all_of or std::none_of algorithm instead of a raw loop." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="224" column="2"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of algorithm instead of a raw loop." verbose="Consider using std::any_of algorithm instead of a raw loop." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="274" column="9"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::all_of or std::none_of algorithm instead of a raw loop." verbose="Consider using std::all_of or std::none_of algorithm instead of a raw loop." cwe="398" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="304" column="2"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: c" verbose="Unused variable: c" cwe="563" file0="../online-shopping-system/Client/Headers/Person.cpp">
+            <location file="..\online-shopping-system\Client\Headers\Person.cpp" line="447" column="10"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\clientProgram.cpp" line="1" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iomanip&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\clientProgram.cpp" line="2" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;conio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;conio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\clientProgram.cpp" line="3" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="..\online-shopping-system\Client\clientProgram.cpp" line="4" column="0"/>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="../online-shopping-system/Client/clientProgram.cpp">
+            <location file="..\online-shopping-system\Client\clientProgram.cpp" line="0" column="0"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/clientProgram.cpp">
+            <location file="..\online-shopping-system\Client\clientProgram.cpp" line="29" column="13"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &apos;stdin&apos; may result in undefined behaviour on non-linux systems." cwe="398" file0="../online-shopping-system/Client/clientProgram.cpp">
+            <location file="..\online-shopping-system\Client\clientProgram.cpp" line="68" column="13"/>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Date&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Date&apos;" cwe="758">
+            <location file="..\online-shopping-system\Server\Headers\Person.h" line="29" column="1"/>
+            <location file="..\online-shopping-system\Client\Headers\Person.h" line="34" column="1"/>
+            <symbol>Date</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Admin&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Admin&apos;" cwe="758">
+            <location file="..\online-shopping-system\Server\Headers\Admin.h" line="4" column="1"/>
+            <location file="..\online-shopping-system\Client\Headers\Admin.h" line="4" column="1"/>
+            <symbol>Admin</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Goods&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Goods&apos;" cwe="758">
+            <location file="..\online-shopping-system\Server\Headers\Goods.h" line="6" column="1"/>
+            <location file="..\online-shopping-system\Client\Headers\Goods.h" line="6" column="1"/>
+            <symbol>Goods</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Cash&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Cash&apos;" cwe="758">
+            <location file="..\online-shopping-system\Server\Headers\Cash.h" line="3" column="1"/>
+            <location file="..\online-shopping-system\Client\Headers\Cash.h" line="3" column="1"/>
+            <symbol>Cash</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Customer&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Customer&apos;" cwe="758">
+            <location file="..\online-shopping-system\Server\Headers\Customer.h" line="4" column="1"/>
+            <location file="..\online-shopping-system\Client\Headers\Customer.h" line="4" column="1"/>
+            <symbol>Customer</symbol>
+        </error>
+        <error id="ctuOneDefinitionRuleViolation" severity="error" msg="The one definition rule is violated, different classes/structs have the same name &apos;Employee&apos;" verbose="The one definition rule is violated, different classes/structs have the same name &apos;Employee&apos;" cwe="758">
+            <location file="..\online-shopping-system\Server\Headers\Employee.h" line="4" column="1"/>
+            <location file="..\online-shopping-system\Client\Headers\Employee.h" line="4" column="1"/>
+            <symbol>Employee</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;balance&apos; is never used." verbose="The function &apos;balance&apos; is never used." cwe="561">
+            <location file="..\online-shopping-system\Server\Headers\Admin.cpp" line="248" column="0"/>
+            <symbol>balance</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;isFree&apos; is never used." verbose="The function &apos;isFree&apos; is never used." cwe="561">
+            <location file="..\online-shopping-system\Server\Headers\Thread.cpp" line="34" column="0"/>
+            <symbol>isFree</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getClient&apos; is never used." verbose="The function &apos;getClient&apos; is never used." cwe="561">
+            <location file="..\online-shopping-system\Server\Headers\Thread.cpp" line="55" column="0"/>
+            <symbol>getClient</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;closeClient&apos; is never used." verbose="The function &apos;closeClient&apos; is never used." cwe="561">
+            <location file="..\online-shopping-system\Server\Headers\Thread.cpp" line="113" column="0"/>
+            <symbol>closeClient</symbol>
+        </error>
+        <error id="checkersReport" severity="information" msg="Active checkers: 179/836 (use --checkers-report=&lt;filename&gt; to see details)" verbose="Active checkers: 179/836 (use --checkers-report=&lt;filename&gt; to see details)"/>
+    </errors>
+</results>
