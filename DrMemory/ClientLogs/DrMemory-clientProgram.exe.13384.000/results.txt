@@ -1,0 +1,277 @@
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:38:58
+Windows version: WinVer=105;Rel=2009;Build=19045;Edition=Professional
+Dr. Memory results for pid 13384: "clientProgram.exe"
+Application cmdline: "clientProgram.exe"
+Recorded 124 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin64\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000007efb00-0x00000000007efb08 8 byte(s)
+# 0 ___chkstk_ms                            [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 _pei386_runtime_relocator               [../../src/mingw-w64-crt/crt/pseudo-reloc.c:472]
+# 2 __tmainCRTStartup
+# 3 .l_start         
+# 4 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:00:01.617 in thread 21732
+Note: 0x00000000007efb00 refers to 664 byte(s) beyond the top of the stack 0x00000000007efd98
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #2: UNINITIALIZED READ: reading register eax
+# 0 WS2_32.dll!WSALookupServiceNextW   +0x23f1   (0x00007ffeb918ded1 <WS2_32.dll+0xded1>)
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 2 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 3 Client::start    
+# 4 main             
+Note: @0:00:05.816 in thread 21732
+Note: instruction: cmp    %eax %r12d
+
+Error #3: UNINITIALIZED READ: reading register eflags
+# 0 WS2_32.dll!WSALookupServiceNextW   +0x240f   (0x00007ffeb918deef <WS2_32.dll+0xdeef>)
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 2 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 3 Client::start    
+# 4 main             
+Note: @0:00:05.842 in thread 21732
+Note: instruction: cmovo  %r13 -> %rax
+
+Error #4: UNINITIALIZED READ: reading 0x00000000007ef930-0x00000000007ef934 4 byte(s) within 0x00000000007ef930-0x00000000007ef938
+# 0 replace_memset                      [D:\a\drmemory\drmemory\drmemory\replace.c:194]
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2448   (0x00007ffeb918df29 <WS2_32.dll+0xdf29>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 3 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 4 Client::start    
+# 5 main             
+Note: @0:00:06.013 in thread 21732
+Note: instruction: cmp    0x30(%rsp) $0x0000000000000003
+
+Error #5: UNINITIALIZED READ: reading register r9
+# 0 WS2_32.dll!closesocket       +0x6d     (0x00007ffeb918506d <WS2_32.dll+0x506d>)
+# 1 Client::Connect  
+# 2 Client::start    
+# 3 main             
+Note: @0:00:07.733 in thread 21732
+Note: instruction: lock xadd   0x10(%r9) %ecx -> 0x10(%r9) %ecx
+
+Error #6: UNINITIALIZED READ: reading register rcx
+# 0 WS2_32.dll!WSAUnhookBlockingHook   +0x6ef    (0x00007ffeb91a4b1f <WS2_32.dll+0x24b1f>)
+# 1 WS2_32.dll!getnameinfo             +0x4b35   (0x00007ffeb9198bf6 <WS2_32.dll+0x18bf6>)
+# 2 Client::Connect  
+# 3 Client::start    
+# 4 main             
+Note: @0:00:07.774 in thread 21732
+Note: instruction: cmp    %rcx $0xffffffffffffffff
+
+Error #7: UNINITIALIZED READ: reading 0x00000000007ef7c4-0x00000000007ef7c8 4 byte(s) within 0x00000000007ef7b0-0x00000000007ef7c8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Client::Send     
+# 5 main             
+Note: @0:01:57.488 in thread 21732
+
+Error #8: UNINITIALIZED READ: reading 0x00000000007ef88c-0x00000000007ef890 4 byte(s) within 0x00000000007ef888-0x00000000007ef898
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Client::Send     
+# 5 main             
+Note: @0:01:57.524 in thread 21732
+
+Error #9: UNINITIALIZED READ: reading 0x00000000007ef774-0x00000000007ef778 4 byte(s) within 0x00000000007ef760-0x00000000007ef778
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Client::Send     
+# 5 Customer::start  
+# 6 main             
+Note: @0:02:21.807 in thread 21732
+
+Error #10: UNINITIALIZED READ: reading 0x00000000007ef83c-0x00000000007ef840 4 byte(s) within 0x00000000007ef838-0x00000000007ef848
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Client::Send     
+# 5 Customer::start  
+# 6 main             
+Note: @0:02:21.841 in thread 21732
+
+Error #11: UNINITIALIZED READ: reading 0x00000000007ef99c-0x00000000007ef9a0 4 byte(s)
+# 0 msvcrt.dll!getch             +0xdc     (0x00007ffeb843bb8c <msvcrt.dll+0x1bb8c>)
+# 1 msvcrt.dll!getch             +0x15     (0x00007ffeb843bac6 <msvcrt.dll+0x1bac6>)
+# 2 Person::login    
+# 3 Customer::start  
+# 4 main             
+Note: @0:02:36.148 in thread 21732
+Note: instruction: cmp    0xffffffdc(%rbp) $0x00000000
+
+Error #12: UNINITIALIZED READ: reading 0x00000000007ef990-0x00000000007ef994 4 byte(s)
+# 0 msvcrt.dll!getch             +0xcf     (0x00007ffeb843bb7f <msvcrt.dll+0x1bb7f>)
+# 1 msvcrt.dll!getch             +0x15     (0x00007ffeb843bac6 <msvcrt.dll+0x1bac6>)
+# 2 Person::login    
+# 3 Customer::start  
+# 4 main             
+Note: @0:02:37.381 in thread 21732
+Note: instruction: cmp    0xffffffd0(%rbp) $0x00000000
+
+Error #13: UNINITIALIZED READ: reading 0x00000000007ef8c4-0x00000000007ef8c8 4 byte(s) within 0x00000000007ef8b0-0x00000000007ef8c8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 main             
+Note: @0:02:39.276 in thread 21732
+
+Error #14: UNINITIALIZED READ: reading 0x00000000007ef98c-0x00000000007ef990 4 byte(s) within 0x00000000007ef988-0x00000000007ef998
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 main             
+Note: @0:02:39.301 in thread 21732
+
+Error #15: UNINITIALIZED READ: reading 0x00000000007ef8c4-0x00000000007ef8c8 4 byte(s) within 0x00000000007ef8b0-0x00000000007ef8c8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 main             
+Note: @0:02:39.334 in thread 21732
+
+Error #16: UNINITIALIZED READ: reading 0x00000000007ef98c-0x00000000007ef990 4 byte(s) within 0x00000000007ef988-0x00000000007ef998
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 main             
+Note: @0:02:39.357 in thread 21732
+
+Error #17: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000007ee9e8-0x00000000007ee9f0 8 byte(s)
+# 0 ___chkstk_ms                  [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Client::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 main             
+Note: @0:02:39.388 in thread 21732
+Note: 0x00000000007ee9e8 refers to 4072 byte(s) beyond the top of the stack 0x00000000007ef9d0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #18: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000007ee980-0x00000000007ee988 8 byte(s)
+# 0 ___chkstk_ms                  [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Client::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 main             
+Note: @0:02:39.419 in thread 21732
+Note: 0x00000000007ee980 refers to 4176 byte(s) beyond the top of the stack 0x00000000007ef9d0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #19: UNINITIALIZED READ: reading 0x00000000007ee86c-0x00000000007ee870 4 byte(s) within 0x00000000007ee858-0x00000000007ee870
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Client::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 main             
+Note: @0:02:39.472 in thread 21732
+
+Error #20: UNINITIALIZED READ: reading 0x00000000007ee94c-0x00000000007ee950 4 byte(s) within 0x00000000007ee948-0x00000000007ee958
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Client::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 main             
+Note: @0:02:39.500 in thread 21732
+
+Error #21: UNINITIALIZED READ: reading 0x00000000007ef654-0x00000000007ef658 4 byte(s) within 0x00000000007ef640-0x00000000007ef658
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Client::Send     
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Customer::start  
+# 8 main             
+Note: @0:02:58.830 in thread 21732
+
+Error #22: UNINITIALIZED READ: reading 0x00000000007ef71c-0x00000000007ef720 4 byte(s) within 0x00000000007ef718-0x00000000007ef728
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Client::Send     
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Customer::start  
+# 8 main             
+Note: @0:02:58.879 in thread 21732
+
+Error #23: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000007ee868-0x00000000007ee870 8 byte(s)
+# 0 ___chkstk_ms                  [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Client::Rec      
+# 2 Person::buy      
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Customer::start  
+# 6 main             
+Note: @0:03:08.291 in thread 21732
+Note: 0x00000000007ee868 refers to 4072 byte(s) beyond the top of the stack 0x00000000007ef850
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #24: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000007ee800-0x00000000007ee808 8 byte(s)
+# 0 ___chkstk_ms                  [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Client::Rec      
+# 2 Person::buy      
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Customer::start  
+# 6 main             
+Note: @0:03:08.335 in thread 21732
+Note: 0x00000000007ee800 refers to 4176 byte(s) beyond the top of the stack 0x00000000007ef850
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #25: UNINITIALIZED READ: reading 0x00000000007ee6ec-0x00000000007ee6f0 4 byte(s) within 0x00000000007ee6d8-0x00000000007ee6f0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Client::Rec      
+# 4 Person::buy      
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Customer::start  
+# 8 main             
+Note: @0:03:08.369 in thread 21732
+
+Error #26: UNINITIALIZED READ: reading 0x00000000007ee7cc-0x00000000007ee7d0 4 byte(s) within 0x00000000007ee7c8-0x00000000007ee7d8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Client::Rec      
+# 4 Person::buy      
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Customer::start  
+# 8 main             
+Note: @0:03:08.404 in thread 21732
+
+Error #27: UNINITIALIZED READ: reading register eax
+# 0 Person::buy      
+# 1 Customer::home   
+# 2 Person::login    
+# 3 Customer::start  
+# 4 main             
+Note: @0:25:21.094 in thread 21732
+Note: instruction: cmp    %eax $0x00000003

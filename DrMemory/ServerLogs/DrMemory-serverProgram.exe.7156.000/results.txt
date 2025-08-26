@@ -1,0 +1,466 @@
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:38:58
+Windows version: WinVer=105;Rel=2009;Build=19045;Edition=Professional
+Dr. Memory results for pid 7156: "serverProgram.exe"
+Application cmdline: "serverProgram.exe"
+Recorded 124 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin64\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000007dfb00-0x00000000007dfb08 8 byte(s)
+# 0 ___chkstk_ms                            [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 _pei386_runtime_relocator               [../../src/mingw-w64-crt/crt/pseudo-reloc.c:472]
+# 2 __tmainCRTStartup
+# 3 .l_start         
+# 4 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:00:00.292 in thread 3484
+Note: 0x00000000007dfb00 refers to 664 byte(s) beyond the top of the stack 0x00000000007dfd98
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #2: UNINITIALIZED READ: reading register eax
+# 0 WS2_32.dll!WSALookupServiceNextW   +0x23f1   (0x00007ffbc28aded1 <WS2_32.dll+0xded1>)
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 2 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 3 Server::start    
+# 4 main             
+Note: @0:00:01.330 in thread 3484
+Note: instruction: cmp    %eax %r12d
+
+Error #3: UNINITIALIZED READ: reading register eflags
+# 0 WS2_32.dll!WSALookupServiceNextW   +0x240f   (0x00007ffbc28adeef <WS2_32.dll+0xdeef>)
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 2 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 3 Server::start    
+# 4 main             
+Note: @0:00:01.336 in thread 3484
+Note: instruction: cmovo  %r13 -> %rax
+
+Error #4: UNINITIALIZED READ: reading 0x00000000007df770-0x00000000007df774 4 byte(s) within 0x00000000007df770-0x00000000007df778
+# 0 replace_memset                      [D:\a\drmemory\drmemory\drmemory\replace.c:194]
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2448   (0x00007ffbc28adf29 <WS2_32.dll+0xdf29>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 3 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 4 Server::start    
+# 5 main             
+Note: @0:00:01.410 in thread 3484
+Note: instruction: cmp    0x30(%rsp) $0x0000000000000003
+
+Error #5: UNINITIALIZED READ: reading register r9
+# 0 WS2_32.dll!closesocket      +0x6d     (0x00007ffbc28a506d <WS2_32.dll+0x506d>)
+# 1 Server::Listen   
+# 2 Server::start    
+# 3 main             
+Note: @0:00:01.852 in thread 3484
+Note: instruction: lock xadd   0x10(%r9) %ecx -> 0x10(%r9) %ecx
+
+Error #6: UNINITIALIZED READ: reading register rcx
+# 0 WS2_32.dll!WSAUnhookBlockingHook   +0x6ef    (0x00007ffbc28c4b1f <WS2_32.dll+0x24b1f>)
+# 1 WS2_32.dll!getnameinfo             +0x4b35   (0x00007ffbc28b8bf6 <WS2_32.dll+0x18bf6>)
+# 2 Server::Listen   
+# 3 Server::start    
+# 4 main             
+Note: @0:00:01.860 in thread 3484
+Note: instruction: cmp    %rcx $0xffffffffffffffff
+
+Error #7: UNINITIALIZED READ: reading 0x00000000007df64c-0x00000000007df650 4 byte(s) within 0x00000000007df5d0-0x00000000007df654
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc02389e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc02358f7 <MSWSOCK.dll+0x58f7>)
+# 3 WS2_32.dll!bind                                                           +0x8f     (0x00007ffbc28b0a50 <WS2_32.dll+0x10a50>)
+# 4 Server::Listen   
+# 5 Server::start    
+# 6 main             
+Note: @0:00:02.958 in thread 3484
+
+Error #8: UNINITIALIZED READ: reading 0x00000000007df6dc-0x00000000007df6e0 4 byte(s) within 0x00000000007df660-0x00000000007df6e4
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc02389e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc0232a29 <MSWSOCK.dll+0x2a29>)
+# 3 WS2_32.dll!listen                                                         +0x64     (0x00007ffbc28b1305 <WS2_32.dll+0x11305>)
+# 4 Server::Listen   
+# 5 Server::start    
+# 6 main             
+Note: @0:00:02.986 in thread 3484
+
+Error #9: UNINITIALIZED READ: reading register rcx
+# 0 WS2_32.dll!_WSAFDIsSet          +0x19     (0x00007ffbc28b28f9 <WS2_32.dll+0x128f9>)
+# 1 Server::processReq
+# 2 Server::run      
+# 3 main             
+Note: @0:00:53.233 in thread 3484
+Note: instruction: cmp    (%r9) %rcx
+
+Error #10: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025aecb8-0x00000000025aecc0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 PROGRAM          
+# 3 worker           
+# 4 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:00:53.315 in thread 14348
+Note: 0x00000000025aecb8 refers to 4072 byte(s) beyond the top of the stack 0x00000000025afca0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #11: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025aec50-0x00000000025aec58 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 PROGRAM          
+# 3 worker           
+# 4 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:00:53.342 in thread 14348
+Note: 0x00000000025aec50 refers to 4176 byte(s) beyond the top of the stack 0x00000000025afca0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #12: UNINITIALIZED READ: reading 0x00000000025aeb3c-0x00000000025aeb40 4 byte(s) within 0x00000000025aeb28-0x00000000025aeb40
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:00:53.370 in thread 14348
+
+Error #13: UNINITIALIZED READ: reading 0x00000000025aec1c-0x00000000025aec20 4 byte(s) within 0x00000000025aec18-0x00000000025aec28
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:00:53.379 in thread 14348
+
+Error #14: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025aec48-0x00000000025aec50 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Customer::start  
+# 3 PROGRAM          
+# 4 worker           
+# 5 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:01:41.981 in thread 14348
+Note: 0x00000000025aec48 refers to 4072 byte(s) beyond the top of the stack 0x00000000025afc30
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #15: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025aebe0-0x00000000025aebe8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Customer::start  
+# 3 PROGRAM          
+# 4 worker           
+# 5 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:01:41.992 in thread 14348
+Note: 0x00000000025aebe0 refers to 4176 byte(s) beyond the top of the stack 0x00000000025afc30
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #16: UNINITIALIZED READ: reading 0x00000000025aeacc-0x00000000025aead0 4 byte(s) within 0x00000000025aeab8-0x00000000025aead0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:01:42.003 in thread 14348
+
+Error #17: UNINITIALIZED READ: reading 0x00000000025aebac-0x00000000025aebb0 4 byte(s) within 0x00000000025aeba8-0x00000000025aebb8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:01:42.021 in thread 14348
+
+Error #18: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025ae918-0x00000000025ae920 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:19.509 in thread 14348
+Note: 0x00000000025ae918 refers to 4072 byte(s) beyond the top of the stack 0x00000000025af900
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #19: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025ae8b0-0x00000000025ae8b8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:19.523 in thread 14348
+Note: 0x00000000025ae8b0 refers to 4176 byte(s) beyond the top of the stack 0x00000000025af900
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #20: UNINITIALIZED READ: reading 0x00000000025ae79c-0x00000000025ae7a0 4 byte(s) within 0x00000000025ae788-0x00000000025ae7a0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:19.536 in thread 14348
+
+Error #21: UNINITIALIZED READ: reading 0x00000000025ae87c-0x00000000025ae880 4 byte(s) within 0x00000000025ae878-0x00000000025ae888
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:19.549 in thread 14348
+
+Error #22: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025ae918-0x00000000025ae920 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:30.933 in thread 14348
+Note: 0x00000000025ae918 refers to 4072 byte(s) beyond the top of the stack 0x00000000025af900
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #23: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025ae8b0-0x00000000025ae8b8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:30.945 in thread 14348
+Note: 0x00000000025ae8b0 refers to 4176 byte(s) beyond the top of the stack 0x00000000025af900
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #24: UNINITIALIZED READ: reading 0x00000000025ae79c-0x00000000025ae7a0 4 byte(s) within 0x00000000025ae788-0x00000000025ae7a0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:30.957 in thread 14348
+
+Error #25: UNINITIALIZED READ: reading 0x00000000025ae87c-0x00000000025ae880 4 byte(s) within 0x00000000025ae878-0x00000000025ae888
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:30.969 in thread 14348
+
+Error #26: UNINITIALIZED READ: reading 0x00000000025af7f4-0x00000000025af7f8 4 byte(s) within 0x00000000025af7e0-0x00000000025af7f8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffbc0239f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffbc28a248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:31.126 in thread 14348
+
+Error #27: UNINITIALIZED READ: reading 0x00000000025af8bc-0x00000000025af8c0 4 byte(s) within 0x00000000025af8b8-0x00000000025af8c8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffbc0239f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffbc28a248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:31.139 in thread 14348
+
+Error #28: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025ae8a8-0x00000000025ae8b0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Customer::home   
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:31.159 in thread 14348
+Note: 0x00000000025ae8a8 refers to 4072 byte(s) beyond the top of the stack 0x00000000025af890
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #29: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025ae840-0x00000000025ae848 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Customer::home   
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:31.173 in thread 14348
+Note: 0x00000000025ae840 refers to 4176 byte(s) beyond the top of the stack 0x00000000025af890
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #30: UNINITIALIZED READ: reading 0x00000000025ae72c-0x00000000025ae730 4 byte(s) within 0x00000000025ae718-0x00000000025ae730
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::home   
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:31.188 in thread 14348
+
+Error #31: UNINITIALIZED READ: reading 0x00000000025ae80c-0x00000000025ae810 4 byte(s) within 0x00000000025ae808-0x00000000025ae818
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffbc023d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::home   
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:31.205 in thread 14348
+
+Error #32: POSSIBLE LEAK 35 direct bytes 0x0000000001ea01c0-0x0000000001ea01e3 + 0 indirect bytes
+# 0 replace_malloc                    [D:\a\drmemory\drmemory\common\alloc_replace.c:2580]
+# 1 msvcrt.dll!realloc               +0x193    (0x00007ffbc19b9f44 <msvcrt.dll+0x19f44>)
+# 2 msvcrt.dll!unlock                +0x40c    (0x00007ffbc19db68d <msvcrt.dll+0x3b68d>)
+# 3 msvcrt.dll!_getmainargs          +0x30     (0x00007ffbc19a7a01 <msvcrt.dll+0x7a01>)
+# 4 pre_cpp_init     
+# 5 msvcrt.dll!initterm              +0x42     (0x00007ffbc19da553 <msvcrt.dll+0x3a553>)
+# 6 __tmainCRTStartup
+# 7 .l_start         
+# 8 KERNEL32.dll!BaseThreadInitThunk
+
+Error #33: LEAK 31 direct bytes 0x0000000001eb49c0-0x0000000001eb49df + 0 indirect bytes
+# 0 replace_operator_new                                  [D:\a\drmemory\drmemory\common\alloc_replace.c:2903]
+# 1 std::__cxx11::basic_string<>::_M_mutate               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 2 std::__cxx11::basic_string<>::_M_append               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 std::getline<>                                        [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+
+Error #34: LEAK 31 direct bytes 0x0000000001eb4f40-0x0000000001eb4f5f + 0 indirect bytes
+# 0 replace_operator_new                                [D:\a\drmemory\drmemory\common\alloc_replace.c:2903]
+# 1 std::__cxx11::basic_string<>::reserve               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 2 std::operator+<>                                    [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+
+Error #35: LEAK 512 direct bytes 0x0000000001eb5400-0x0000000001eb5600 + 0 indirect bytes
+# 0 replace_operator_new_array                          [D:\a\drmemory\drmemory\common\alloc_replace.c:2932]
+# 1 std::basic_filebuf<>::open                          [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 2 std::basic_ifstream<>::basic_ifstream               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 Person::initialize_cash
+# 4 Person::buy      
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+
+Error #36: POSSIBLE LEAK 176 direct bytes 0x0000000001eb5620-0x0000000001eb56d0 + 29 indirect bytes
+# 0 replace_malloc                                                             [D:\a\drmemory\drmemory\common\alloc_replace.c:2580]
+# 1 __cxa_allocate_exception                                                   [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 2 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 5 Person::initialize_cash
+# 6 Person::buy      
+# 7 Customer::home   
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+
+Error #37: POSSIBLE LEAK 24 direct bytes 0x0000000001eb5d50-0x0000000001eb5d68 + 0 indirect bytes
+# 0 replace_malloc                                                             [D:\a\drmemory\drmemory\common\alloc_replace.c:2580]
+# 1 __emutls_get_address                                                       [../../../src/libgcc/emutls.c:102]
+# 2 __cxa_throw                                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 5 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 Person::initialize_cash
+# 7 Person::buy      
+# 8 Customer::home   
+# 9 Person::login    
+#10 Customer::start  
+#11 PROGRAM          
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      2
+	Error #   9:    185
+	Error #  10:      4
+	Error #  11:      4
+	Error #  12:      2
+	Error #  13:      2
+	Error #  14:      4
+	Error #  15:      4
+	Error #  16:      2
+	Error #  17:      2
+	Error #  18:      4
+	Error #  19:      4
+	Error #  20:      2
+	Error #  21:      2
+	Error #  22:      4
+	Error #  23:      4
+	Error #  24:      2
+	Error #  25:      2
+	Error #  26:      2
+	Error #  27:      2
+	Error #  28:      4
+	Error #  29:      4
+	Error #  30:      2
+	Error #  31:      2
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+     11 unique,    42 total unaddressable access(es)
+     20 unique,   216 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      3 unique,     3 total,    574 byte(s) of leak(s)
+      3 unique,     3 total,    264 byte(s) of possible leak(s)
+ERRORS IGNORED:
+     51 potential error(s) (suspected false positives)
+         (details: C:\Users\Dida\Desktop\2024_Analysis_online-shopping-system\online-shopping-system\Server\ServerLogs\DrMemory-serverProgram.exe.7156.000\potential_errors.txt)
+      1 potential leak(s) (suspected false positives)
+         (details: C:\Users\Dida\Desktop\2024_Analysis_online-shopping-system\online-shopping-system\Server\ServerLogs\DrMemory-serverProgram.exe.7156.000\potential_errors.txt)
+     80 unique,   122 total, 111046 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: C:\Users\Dida\Desktop\2024_Analysis_online-shopping-system\online-shopping-system\Server\ServerLogs\DrMemory-serverProgram.exe.7156.000\results.txt

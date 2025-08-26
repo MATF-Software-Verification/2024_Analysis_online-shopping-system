@@ -1,0 +1,94 @@
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:38:58
+Windows version: WinVer=105;Rel=2009;Build=19045;Edition=Professional
+Dr. Memory results for pid 2504: "clientProgram.exe"
+Application cmdline: "clientProgram.exe"
+Recorded 124 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin64\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000007efb00-0x00000000007efb08 8 byte(s)
+# 0 ___chkstk_ms                            [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 _pei386_runtime_relocator               [../../src/mingw-w64-crt/crt/pseudo-reloc.c:472]
+# 2 __tmainCRTStartup
+# 3 .l_start         
+# 4 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:00:00.288 in thread 5036
+Note: 0x00000000007efb00 refers to 664 byte(s) beyond the top of the stack 0x00000000007efd98
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #2: UNINITIALIZED READ: reading register eax
+# 0 WS2_32.dll!WSALookupServiceNextW   +0x23f1   (0x00007ffbc28aded1 <WS2_32.dll+0xded1>)
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 2 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 3 Client::start    
+# 4 main             
+Note: @0:00:01.488 in thread 5036
+Note: instruction: cmp    %eax %r12d
+
+Error #3: UNINITIALIZED READ: reading register eflags
+# 0 WS2_32.dll!WSALookupServiceNextW   +0x240f   (0x00007ffbc28adeef <WS2_32.dll+0xdeef>)
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 2 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 3 Client::start    
+# 4 main             
+Note: @0:00:01.509 in thread 5036
+Note: instruction: cmovo  %r13 -> %rax
+
+Error #4: UNINITIALIZED READ: reading 0x00000000007ef930-0x00000000007ef934 4 byte(s) within 0x00000000007ef930-0x00000000007ef938
+# 0 replace_memset                      [D:\a\drmemory\drmemory\drmemory\replace.c:194]
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2448   (0x00007ffbc28adf29 <WS2_32.dll+0xdf29>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 3 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 4 Client::start    
+# 5 main             
+Note: @0:00:01.587 in thread 5036
+Note: instruction: cmp    0x30(%rsp) $0x0000000000000003
+
+Error #5: UNINITIALIZED READ: reading register r9
+# 0 WS2_32.dll!closesocket       +0x6d     (0x00007ffbc28a506d <WS2_32.dll+0x506d>)
+# 1 Client::Connect  
+# 2 Client::start    
+# 3 main             
+Note: @0:00:02.409 in thread 5036
+Note: instruction: lock xadd   0x10(%r9) %ecx -> 0x10(%r9) %ecx
+
+Error #6: UNINITIALIZED READ: reading register rcx
+# 0 WS2_32.dll!WSAUnhookBlockingHook   +0x6ef    (0x00007ffbc28c4b1f <WS2_32.dll+0x24b1f>)
+# 1 WS2_32.dll!getnameinfo             +0x4b35   (0x00007ffbc28b8bf6 <WS2_32.dll+0x18bf6>)
+# 2 Client::Connect  
+# 3 Client::start    
+# 4 main             
+Note: @0:00:02.428 in thread 5036
+Note: instruction: cmp    %rcx $0xffffffffffffffff
+
+Error #7: UNINITIALIZED READ: reading 0x00000000007ef7c4-0x00000000007ef7c8 4 byte(s) within 0x00000000007ef7b0-0x00000000007ef7c8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffbc0239f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffbc28a248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Client::Send     
+# 5 main             
+Note: @0:02:24.816 in thread 5036
+
+Error #8: UNINITIALIZED READ: reading 0x00000000007ef88c-0x00000000007ef890 4 byte(s) within 0x00000000007ef888-0x00000000007ef898
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffbc0239f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffbc28a248b <WS2_32.dll+0x248b>)
+# 3 Client::Send     
+# 4 Client::Send     
+# 5 main             
+Note: @0:02:24.825 in thread 5036
+
+Error #9: UNINITIALIZED READ: reading 0x00000000007efa2c-0x00000000007efa30 4 byte(s)
+# 0 msvcrt.dll!getch             +0xdc     (0x00007ffbc19bbb8c <msvcrt.dll+0x1bb8c>)
+# 1 msvcrt.dll!getch             +0x15     (0x00007ffbc19bbac6 <msvcrt.dll+0x1bac6>)
+# 2 Customer::start  
+# 3 main             
+Note: @0:02:38.184 in thread 5036
+Note: instruction: cmp    0xffffffdc(%rbp) $0x00000000
+
+Error #10: UNINITIALIZED READ: reading 0x00000000007efa20-0x00000000007efa24 4 byte(s)
+# 0 msvcrt.dll!getch             +0xcf     (0x00007ffbc19bbb7f <msvcrt.dll+0x1bb7f>)
+# 1 msvcrt.dll!getch             +0x15     (0x00007ffbc19bbac6 <msvcrt.dll+0x1bac6>)
+# 2 Customer::start  
+# 3 main             
+Note: @0:02:41.444 in thread 5036
+Note: instruction: cmp    0xffffffd0(%rbp) $0x00000000

@@ -1,0 +1,856 @@
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:38:58
+Dr. Memory errors that are likely to be false positives, for pid 7156: "serverProgram.exe"
+These errors matched the blocklist ',C:\WINDOWS*.d??' for 4 frames.
+Run with -lib_blocklist_frames 0 to treat these as regular errors.
+If these are all false positives and your focus is unaddressable errors, consider running with -light to skip all uninitialized reads and leaks for higher performance.
+
+Potential Error #1: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1d62   (0x00007ffbc28ad843 <WS2_32.dll+0xd843>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0xeac    (0x00007ffbc28ac98d <WS2_32.dll+0xc98d>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x2377   (0x00007ffbc28ade58 <WS2_32.dll+0xde58>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 6 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 7 Server::start    
+# 8 main             
+Note: @0:00:01.133 in thread 3484
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #2: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!RegQueryValueExA
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x1d62   (0x00007ffbc28ad843 <WS2_32.dll+0xd843>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0xeac    (0x00007ffbc28ac98d <WS2_32.dll+0xc98d>)
+# 3 WS2_32.dll!WSALookupServiceNextW   +0x2377   (0x00007ffbc28ade58 <WS2_32.dll+0xde58>)
+# 4 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 5 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 6 Server::start    
+# 7 main             
+Note: @0:00:01.141 in thread 3484
+Note: instruction: cmp    %eax $0x00000001
+
+Potential Error #3: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1d62   (0x00007ffbc28ad843 <WS2_32.dll+0xd843>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0xeac    (0x00007ffbc28ac98d <WS2_32.dll+0xc98d>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x2377   (0x00007ffbc28ade58 <WS2_32.dll+0xde58>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 6 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 7 Server::start    
+# 8 main             
+Note: @0:00:01.148 in thread 3484
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #4: UNINITIALIZED READ: reading 0x00000000007df450-0x00000000007df454 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1d62   (0x00007ffbc28ad843 <WS2_32.dll+0xd843>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0xeac    (0x00007ffbc28ac98d <WS2_32.dll+0xc98d>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x2377   (0x00007ffbc28ade58 <WS2_32.dll+0xde58>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 6 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 7 Server::start    
+# 8 main             
+Note: @0:00:01.153 in thread 3484
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #5: UNINITIALIZED READ: reading register r12d
+# 0 KERNELBASE.dll!RegQueryValueExA
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x1d62   (0x00007ffbc28ad843 <WS2_32.dll+0xd843>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0xeac    (0x00007ffbc28ac98d <WS2_32.dll+0xc98d>)
+# 3 WS2_32.dll!WSALookupServiceNextW   +0x2377   (0x00007ffbc28ade58 <WS2_32.dll+0xde58>)
+# 4 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 5 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 6 Server::start    
+# 7 main             
+Note: @0:00:01.159 in thread 3484
+Note: instruction: cmp    0xd0(%rsp) %r12d
+
+Potential Error #6: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x2473   (0x00007ffbc28adf54 <WS2_32.dll+0xdf54>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 4 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 5 Server::start    
+# 6 main             
+Note: @0:00:01.417 in thread 3484
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #7: UNINITIALIZED READ: reading 0x00000000007df770-0x00000000007df774 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x2473   (0x00007ffbc28adf54 <WS2_32.dll+0xdf54>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 4 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 5 Server::start    
+# 6 main             
+Note: @0:00:01.423 in thread 3484
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #8: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x17b7   (0x00007ffbc28ad298 <WS2_32.dll+0xd298>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x16d3   (0x00007ffbc28ad1b4 <WS2_32.dll+0xd1b4>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x1529   (0x00007ffbc28ad00a <WS2_32.dll+0xd00a>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x230b   (0x00007ffbc28addec <WS2_32.dll+0xddec>)
+# 6 WS2_32.dll!WSALookupServiceNextW       +0x25bd   (0x00007ffbc28ae09e <WS2_32.dll+0xe09e>)
+# 7 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 8 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 9 Server::start    
+#10 main             
+Note: @0:00:01.503 in thread 3484
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #9: UNINITIALIZED READ: reading 0x00000000007df320-0x00000000007df324 4 byte(s) within 0x00000000007df320-0x00000000007df324
+# 0 system call NtQueryValueKey parameter value #4
+# 1 KERNELBASE.dll!Wow64NtQueryValueKey
+# 2 KERNELBASE.dll!BaseRegQueryValueInternal
+# 3 KERNELBASE.dll!RegQueryValueExA
+# 4 WS2_32.dll!WSALookupServiceNextW                            +0x17b7   (0x00007ffbc28ad298 <WS2_32.dll+0xd298>)
+# 5 WS2_32.dll!WSALookupServiceNextW                            +0x16d3   (0x00007ffbc28ad1b4 <WS2_32.dll+0xd1b4>)
+# 6 WS2_32.dll!WSALookupServiceNextW                            +0x1529   (0x00007ffbc28ad00a <WS2_32.dll+0xd00a>)
+# 7 WS2_32.dll!WSALookupServiceNextW                            +0x230b   (0x00007ffbc28addec <WS2_32.dll+0xddec>)
+# 8 WS2_32.dll!WSALookupServiceNextW                            +0x25bd   (0x00007ffbc28ae09e <WS2_32.dll+0xe09e>)
+# 9 WS2_32.dll!WSALookupServiceNextW                            +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+#10 WS2_32.dll!WSAStartup                                       +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+#11 Server::start    
+#12 main             
+Note: @0:00:01.510 in thread 3484
+
+Potential Error #10: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!RegQueryValueExA
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x1a8e   (0x00007ffbc28ad56f <WS2_32.dll+0xd56f>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0x1323   (0x00007ffbc28ace04 <WS2_32.dll+0xce04>)
+# 3 WS2_32.dll!WSALookupServiceNextW   +0x11d7   (0x00007ffbc28accb8 <WS2_32.dll+0xccb8>)
+# 4 WS2_32.dll!WSALookupServiceNextW   +0x22cb   (0x00007ffbc28addac <WS2_32.dll+0xddac>)
+# 5 WS2_32.dll!WSALookupServiceNextW   +0x262f   (0x00007ffbc28ae110 <WS2_32.dll+0xe110>)
+# 6 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 7 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 8 Server::start    
+# 9 main             
+Note: @0:00:01.621 in thread 3484
+Note: instruction: cmp    %eax $0x00000001
+
+Potential Error #11: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1a8e   (0x00007ffbc28ad56f <WS2_32.dll+0xd56f>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x1323   (0x00007ffbc28ace04 <WS2_32.dll+0xce04>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x11d7   (0x00007ffbc28accb8 <WS2_32.dll+0xccb8>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x22cb   (0x00007ffbc28addac <WS2_32.dll+0xddac>)
+# 6 WS2_32.dll!WSALookupServiceNextW       +0x262f   (0x00007ffbc28ae110 <WS2_32.dll+0xe110>)
+# 7 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 8 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 9 Server::start    
+#10 main             
+Note: @0:00:01.626 in thread 3484
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #12: UNINITIALIZED READ: reading 0x00000000007df490-0x00000000007df494 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1a8e   (0x00007ffbc28ad56f <WS2_32.dll+0xd56f>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x1323   (0x00007ffbc28ace04 <WS2_32.dll+0xce04>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x11d7   (0x00007ffbc28accb8 <WS2_32.dll+0xccb8>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x22cb   (0x00007ffbc28addac <WS2_32.dll+0xddac>)
+# 6 WS2_32.dll!WSALookupServiceNextW       +0x262f   (0x00007ffbc28ae110 <WS2_32.dll+0xe110>)
+# 7 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 8 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 9 Server::start    
+#10 main             
+Note: @0:00:01.631 in thread 3484
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #13: UNINITIALIZED READ: reading register r12d
+# 0 KERNELBASE.dll!RegQueryValueExA
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x1a8e   (0x00007ffbc28ad56f <WS2_32.dll+0xd56f>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0x1323   (0x00007ffbc28ace04 <WS2_32.dll+0xce04>)
+# 3 WS2_32.dll!WSALookupServiceNextW   +0x11d7   (0x00007ffbc28accb8 <WS2_32.dll+0xccb8>)
+# 4 WS2_32.dll!WSALookupServiceNextW   +0x22cb   (0x00007ffbc28addac <WS2_32.dll+0xddac>)
+# 5 WS2_32.dll!WSALookupServiceNextW   +0x262f   (0x00007ffbc28ae110 <WS2_32.dll+0xe110>)
+# 6 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 7 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 8 Server::start    
+# 9 main             
+Note: @0:00:01.636 in thread 3484
+Note: instruction: cmp    0xd0(%rsp) %r12d
+
+Potential Error #14: UNINITIALIZED READ: reading 0x00000000007df3a0-0x00000000007df3a4 4 byte(s)
+# 0 MSWSOCK.dll!WSPStartup      +0x72b    (0x00007ffbc023aaeb <MSWSOCK.dll+0xaaeb>)
+# 1 MSWSOCK.dll!?               +0x0      (0x00007ffbc0237b9d <MSWSOCK.dll+0x7b9d>)
+# 2 MSWSOCK.dll!?               +0x0      (0x00007ffbc0237205 <MSWSOCK.dll+0x7205>)
+# 3 MSWSOCK.dll!?               +0x0      (0x00007ffbc0236fda <MSWSOCK.dll+0x6fda>)
+# 4 WS2_32.dll!WSASocketW       +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 5 WS2_32.dll!socket           +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 6 Server::Listen   
+# 7 Server::start    
+# 8 main             
+Note: @0:00:02.697 in thread 3484
+Note: instruction: cmp    0x30(%rbp) $0x00000007
+
+Potential Error #15: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 MSWSOCK.dll!WSPStartup                 +0x77d    (0x00007ffbc023ab3e <MSWSOCK.dll+0xab3e>)
+# 3 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0237b9d <MSWSOCK.dll+0x7b9d>)
+# 4 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0237205 <MSWSOCK.dll+0x7205>)
+# 5 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0236fda <MSWSOCK.dll+0x6fda>)
+# 6 WS2_32.dll!WSASocketW                  +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 8 Server::Listen   
+# 9 Server::start    
+#10 main             
+Note: @0:00:02.706 in thread 3484
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #16: UNINITIALIZED READ: reading 0x00000000007df350-0x00000000007df354 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 MSWSOCK.dll!WSPStartup                 +0x77d    (0x00007ffbc023ab3e <MSWSOCK.dll+0xab3e>)
+# 3 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0237b9d <MSWSOCK.dll+0x7b9d>)
+# 4 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0237205 <MSWSOCK.dll+0x7205>)
+# 5 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0236fda <MSWSOCK.dll+0x6fda>)
+# 6 WS2_32.dll!WSASocketW                  +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 8 Server::Listen   
+# 9 Server::start    
+#10 main             
+Note: @0:00:02.712 in thread 3484
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #17: UNINITIALIZED READ: reading 0x00000000007df3a8-0x00000000007df3ac 4 byte(s)
+# 0 MSWSOCK.dll!?               +0x0      (0x00007ffbc0239042 <MSWSOCK.dll+0x9042>)
+# 1 MSWSOCK.dll!?               +0x0      (0x00007ffbc0237bec <MSWSOCK.dll+0x7bec>)
+# 2 MSWSOCK.dll!?               +0x0      (0x00007ffbc0237205 <MSWSOCK.dll+0x7205>)
+# 3 MSWSOCK.dll!?               +0x0      (0x00007ffbc0236fda <MSWSOCK.dll+0x6fda>)
+# 4 WS2_32.dll!WSASocketW       +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 5 WS2_32.dll!socket           +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 6 Server::Listen   
+# 7 Server::start    
+# 8 main             
+Note: @0:00:02.732 in thread 3484
+Note: instruction: cmp    0x78(%rsp) $0x00000003
+
+Potential Error #18: UNINITIALIZED READ: reading register eax
+# 0 MSWSOCK.dll!?               +0x0      (0x00007ffbc0239051 <MSWSOCK.dll+0x9051>)
+# 1 MSWSOCK.dll!?               +0x0      (0x00007ffbc0237bec <MSWSOCK.dll+0x7bec>)
+# 2 MSWSOCK.dll!?               +0x0      (0x00007ffbc0237205 <MSWSOCK.dll+0x7205>)
+# 3 MSWSOCK.dll!?               +0x0      (0x00007ffbc0236fda <MSWSOCK.dll+0x6fda>)
+# 4 WS2_32.dll!WSASocketW       +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 5 WS2_32.dll!socket           +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 6 Server::Listen   
+# 7 Server::start    
+# 8 main             
+Note: @0:00:02.741 in thread 3484
+Note: instruction: cmp    %eax $0x00000014
+
+Potential Error #19: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 MSWSOCK.dll!?                          +0x0      (0x00007ffbc02390a9 <MSWSOCK.dll+0x90a9>)
+# 3 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0237bec <MSWSOCK.dll+0x7bec>)
+# 4 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0237205 <MSWSOCK.dll+0x7205>)
+# 5 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0236fda <MSWSOCK.dll+0x6fda>)
+# 6 WS2_32.dll!WSASocketW                  +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 8 Server::Listen   
+# 9 Server::start    
+#10 main             
+Note: @0:00:02.751 in thread 3484
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #20: UNINITIALIZED READ: reading 0x00000000007df340-0x00000000007df344 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 MSWSOCK.dll!?                          +0x0      (0x00007ffbc02390a9 <MSWSOCK.dll+0x90a9>)
+# 3 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0237bec <MSWSOCK.dll+0x7bec>)
+# 4 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0237205 <MSWSOCK.dll+0x7205>)
+# 5 MSWSOCK.dll!?                          +0x0      (0x00007ffbc0236fda <MSWSOCK.dll+0x6fda>)
+# 6 WS2_32.dll!WSASocketW                  +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 8 Server::Listen   
+# 9 Server::start    
+#10 main             
+Note: @0:00:02.761 in thread 3484
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #21: UNINITIALIZED READ: reading 0x00000000007df5ec-0x00000000007df5f0 4 byte(s) within 0x00000000007df570-0x00000000007df5f4
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc02389e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc0236ffc <MSWSOCK.dll+0x6ffc>)
+# 3 WS2_32.dll!WSASocketW                                                     +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 4 WS2_32.dll!socket                                                         +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 5 Server::Listen   
+# 6 Server::start    
+# 7 main             
+Note: @0:00:02.885 in thread 3484
+
+Potential Error #22: UNINITIALIZED READ: reading 0x00000000007def0c-0x00000000007def10 4 byte(s) within 0x00000000007dee90-0x00000000007def14
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc02389e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc02330b3 <MSWSOCK.dll+0x30b3>)
+# 3 MSWSOCK.dll!?                                                             +0x0      (0x00007ffbc0231f87 <MSWSOCK.dll+0x1f87>)
+# 4 WS2_32.dll!WSAAccept                                                      +0xd2     (0x00007ffbc28b1453 <WS2_32.dll+0x11453>)
+# 5 WS2_32.dll!accept                                                         +0x11     (0x00007ffbc28b1372 <WS2_32.dll+0x11372>)
+# 6 Server::processReq
+# 7 Server::run      
+# 8 main             
+Note: @0:00:52.874 in thread 3484
+
+Potential Error #23: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000025ad000-0x00000000025ad001 1 byte(s)
+# 0 msvcrt.dll!setjmpex                  +0x1f7    (0x00007ffbc1a12f57 <msvcrt.dll+0x72f57>)
+# 1 msvcrt.dll!write                     +0x125    (0x00007ffbc19bfbf6 <msvcrt.dll+0x1fbf6>)
+# 2 msvcrt.dll!write                     +0x96     (0x00007ffbc19bfb67 <msvcrt.dll+0x1fb67>)
+# 3 msvcrt.dll!flsbuf                    +0x15d    (0x00007ffbc19e719e <msvcrt.dll+0x4719e>)
+# 4 msvcrt.dll!ftell                     +0x1cb    (0x00007ffbc19ee0fc <msvcrt.dll+0x4e0fc>)
+# 5 msvcrt.dll!fwrite                    +0x84     (0x00007ffbc19ee1e5 <msvcrt.dll+0x4e1e5>)
+# 6 std::__ostream_insert<>               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 7 std::operator<< <>                    [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 Person::buy      
+# 9 Customer::home   
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:38.842 in thread 14348
+Note: 0x00000000025ad000 refers to 8056 byte(s) beyond the top of the stack 0x00000000025aef78
+Note: instruction: test   (%r11) %r11l
+
+Potential Error #24: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000000002d1d000-0x0000000002d1d001 1 byte(s)
+# 0 ntdll.dll!_chkstk  
+# 1 ntdll.dll!RtlDispatchException
+# 2 ntdll.dll!RtlRaiseException
+# 3 ntdll.dll!RtlRaiseException
+# 4 KERNELBASE.dll!RaiseException
+# 5 KERNELBASE.dll!RaiseException
+# 6 KERNELBASE.dll!RaiseException
+# 7 _Unwind_RaiseException                                                     [../../../src/libgcc/unwind-seh.c:334]
+# 8 __cxa_throw                                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 9 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#10 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#11 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#12 Person::initialize_cash
+#13 Person::buy      
+#14 Customer::home   
+#15 Person::login    
+#16 Customer::start  
+#17 PROGRAM          
+#18 worker           
+#19 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:11.137 in thread 8916
+Note: 0x0000000002d1d000 refers to 4792 byte(s) beyond the top of the stack 0x0000000002d1e2b8
+Note: instruction: test   (%r11) %r11l
+
+Potential Error #25: UNINITIALIZED READ: reading 0x0000000002d1e626-0x0000000002d1e638 18 byte(s) within 0x0000000002d1e620-0x0000000002d1e820
+# 0 ntdll.dll!RcContinueExit
+# 1 ntdll.dll!RtlRaiseException
+# 2 KERNELBASE.dll!RaiseException
+# 3 KERNELBASE.dll!RaiseException
+# 4 KERNELBASE.dll!RaiseException
+# 5 _Unwind_RaiseException                                                     [../../../src/libgcc/unwind-seh.c:334]
+# 6 __cxa_throw                                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 7 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 9 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#10 Person::initialize_cash
+#11 Person::buy      
+#12 Customer::home   
+#13 Person::login    
+#14 Customer::start  
+#15 PROGRAM          
+#16 worker           
+#17 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:11.561 in thread 8916
+Note: instruction: fxrstor 0x00000100(%rcx)
+
+Potential Error #26: UNINITIALIZED READ: reading 0x0000000002d1e49a-0x0000000002d1e4a0 6 byte(s) within 0x0000000002d1e490-0x0000000002d1e4b8
+# 0 ntdll.dll!RcContinueExit
+# 1 ntdll.dll!RtlRaiseException
+# 2 KERNELBASE.dll!RaiseException
+# 3 KERNELBASE.dll!RaiseException
+# 4 KERNELBASE.dll!RaiseException
+# 5 _Unwind_RaiseException                                                     [../../../src/libgcc/unwind-seh.c:334]
+# 6 __cxa_throw                                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 7 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 9 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#10 Person::initialize_cash
+#11 Person::buy      
+#12 Customer::home   
+#13 Person::login    
+#14 Customer::start  
+#15 PROGRAM          
+#16 worker           
+#17 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:11.635 in thread 8916
+Note: instruction: iret   %rsp (%rsp) -> %rsp
+
+Potential Error #27: LEAK 16 direct bytes 0x0000000001abfc70-0x0000000001abfc80 + 98 indirect bytes
+# 0 replace_RtlAllocateHeap                                       [D:\a\drmemory\drmemory\common\alloc_replace.c:3772]
+# 1 ntdll.dll!RtlpUpdateTEBLanguage
+# 2 ntdll.dll!InitializeTEBUserLangList
+# 3 ntdll.dll!RtlGetThreadPreferredUILanguages
+# 4 KERNEL32.dll!BasepSxsGetLanguageFallbacks
+# 5 KERNEL32.dll!BasepSxsGetCreateProcessLanguageFallbacksCached
+# 6 KERNEL32.dll!BasepConstructSxsCreateProcessMessage
+# 7 KERNELBASE.dll!CreateProcessInternalW
+# 8 KERNELBASE.dll!CreateProcessInternalA
+# 9 KERNELBASE.dll!CreateProcessA
+#10 KERNEL32.dll!CreateProcessAStub
+#11 msvcrt.dll!system                                            +0x973    (0x00007ffbc19b87c4 <msvcrt.dll+0x187c4>)
+
+Potential Error #28: HANDLE LEAK: KERNEL handle 0x0000000000000100 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKeyEx    
+# 1 KERNELBASE.dll!Wow64NtOpenKey
+# 2 KERNELBASE.dll!OpenLocalMachineInternal
+# 3 KERNELBASE.dll!MapPredefinedHandleInternal
+# 4 KERNELBASE.dll!RegOpenKeyExInternalW
+# 5 KERNELBASE.dll!RegOpenKeyExW 
+# 6 WS2_32.dll!WSALookupServiceNextW         +0xe16    (0x00007ffbc28ac8f7 <WS2_32.dll+0xc8f7>)
+# 7 WS2_32.dll!WSALookupServiceNextW         +0x2377   (0x00007ffbc28ade58 <WS2_32.dll+0xde58>)
+# 8 WS2_32.dll!WSALookupServiceNextW         +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 9 WS2_32.dll!WSAStartup                    +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+#10 Server::start    
+#11 main             
+Note: @0:09:13.220 in thread 8916
+
+Potential Error #29: HANDLE LEAK: KERNEL handle 0x0000000000000108 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtDuplicateObject
+# 1 KERNELBASE.dll!DuplicateHandle
+# 2 WS2_32.dll!WahOpenCurrentThread            +0x6a     (0x00007ffbc28af22b <WS2_32.dll+0xf22b>)
+# 3 WS2_32.dll!WSAStartup                      +0x678    (0x00007ffbc28af189 <WS2_32.dll+0xf189>)
+# 4 WS2_32.dll!WSAStartup                      +0x58e    (0x00007ffbc28af09f <WS2_32.dll+0xf09f>)
+# 5 WS2_32.dll!WSAStartup                      +0x3bf    (0x00007ffbc28aeed0 <WS2_32.dll+0xeed0>)
+# 6 Server::start    
+# 7 main             
+Note: @0:09:13.231 in thread 8916
+
+Potential Error #30: HANDLE LEAK: KERNEL handle 0x0000000000000118 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateEvent                
+# 1 KERNELBASE.dll!CreateEventA  
+# 2 __pthread_self_lite                                     [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 pthread_once                                            [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 std::locale::locale                                     [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 5 std::ios_base::Init::Init                               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 __static_initialization_and_destruction_0
+# 7 _GLOBAL__sub_I__ZN6ServerD2Ev
+# 8 __do_global_ctors                                       [../../src/mingw-w64-crt/crt/gccmain.c:67]
+# 9 __tmainCRTStartup
+#10 .l_start         
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:13.288 in thread 8916
+
+Potential Error #31: HANDLE LEAK: KERNEL handle 0x000000000000011c and 0 similar handle(s) were opened but not closed:
+# 0 system call NtDuplicateObject            
+# 1 KERNELBASE.dll!DuplicateHandle
+# 2 __pthread_self_lite                                     [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 pthread_once                                            [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 std::locale::locale                                     [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 5 std::ios_base::Init::Init                               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 __static_initialization_and_destruction_0
+# 7 _GLOBAL__sub_I__ZN6ServerD2Ev
+# 8 __do_global_ctors                                       [../../src/mingw-w64-crt/crt/gccmain.c:67]
+# 9 __tmainCRTStartup
+#10 .l_start         
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:13.313 in thread 8916
+
+Potential Error #32: HANDLE LEAK: KERNEL handle 0x0000000000000124 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateEvent
+# 1 KERNELBASE.dll!CreateEventA  
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x239d   (0x00007ffbc28ade7e <WS2_32.dll+0xde7e>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 4 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 5 Server::start    
+# 6 main             
+Note: @0:09:13.319 in thread 8916
+
+Potential Error #33: HANDLE LEAK: KERNEL handle 0x0000000000000130 and 4 similar handle(s) were opened but not closed:
+# 0 system call NtCreateThreadEx
+# 1 KERNELBASE.dll!CreateRemoteThreadEx
+# 2 KERNEL32.dll!CreateThreadStub
+# 3 Thread::create   
+# 4 Server::createThreads
+# 5 Server::start    
+# 6 main             
+Note: @0:09:13.328 in thread 8916
+
+Potential Error #34: HANDLE LEAK: KERNEL handle 0x0000000000000134 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKeyEx
+# 1 KERNELBASE.dll!Wow64NtOpenKey
+# 2 KERNELBASE.dll!BaseRegOpenKeyInternal
+# 3 KERNELBASE.dll!LocalBaseRegOpenKey
+# 4 KERNELBASE.dll!RegOpenKeyExInternalA
+# 5 KERNELBASE.dll!RegOpenKeyExA 
+# 6 WS2_32.dll!WSALookupServiceNextW     +0x9d1    (0x00007ffbc28ac4b2 <WS2_32.dll+0xc4b2>)
+# 7 WS2_32.dll!WSALookupServiceNextW     +0x22fc   (0x00007ffbc28adddd <WS2_32.dll+0xdddd>)
+# 8 WS2_32.dll!WSALookupServiceNextW     +0x25bd   (0x00007ffbc28ae09e <WS2_32.dll+0xe09e>)
+# 9 WS2_32.dll!WSALookupServiceNextW     +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+#10 WS2_32.dll!WSAStartup                +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+#11 Server::start    
+#12 main             
+Note: @0:09:13.337 in thread 8916
+
+Potential Error #35: HANDLE LEAK: KERNEL handle 0x0000000000000138 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateEvent
+# 1 KERNELBASE.dll!CreateEventA  
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x25d9   (0x00007ffbc28ae0ba <WS2_32.dll+0xe0ba>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+# 4 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+# 5 Server::start    
+# 6 main             
+Note: @0:09:13.341 in thread 8916
+
+Potential Error #36: HANDLE LEAK: KERNEL handle 0x000000000000013c and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKeyEx
+# 1 KERNELBASE.dll!Wow64NtOpenKey
+# 2 KERNELBASE.dll!BaseRegOpenKeyInternal
+# 3 KERNELBASE.dll!LocalBaseRegOpenKey
+# 4 KERNELBASE.dll!RegOpenKeyExInternalA
+# 5 KERNELBASE.dll!RegOpenKeyExA 
+# 6 WS2_32.dll!WSALookupServiceNextW     +0xab1    (0x00007ffbc28ac592 <WS2_32.dll+0xc592>)
+# 7 WS2_32.dll!WSALookupServiceNextW     +0x22bc   (0x00007ffbc28add9d <WS2_32.dll+0xdd9d>)
+# 8 WS2_32.dll!WSALookupServiceNextW     +0x262f   (0x00007ffbc28ae110 <WS2_32.dll+0xe110>)
+# 9 WS2_32.dll!WSALookupServiceNextW     +0x2ffd   (0x00007ffbc28aeade <WS2_32.dll+0xeade>)
+#10 WS2_32.dll!WSAStartup                +0x33c    (0x00007ffbc28aee4d <WS2_32.dll+0xee4d>)
+#11 Server::start    
+#12 main             
+Note: @0:09:13.347 in thread 8916
+
+Potential Error #37: HANDLE LEAK: KERNEL handle 0x0000000000000154 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateEvent
+# 1 MSWSOCK.dll!?                          +0x0      (0x00007ffbc023a293 <MSWSOCK.dll+0xa293>)
+# 2 MSWSOCK.dll!WSPStartup                 +0x64     (0x00007ffbc023a425 <MSWSOCK.dll+0xa425>)
+# 3 WS2_32.dll!WahInsertHandleContext      +0x8d0    (0x00007ffbc28a30d1 <WS2_32.dll+0x30d1>)
+# 4 WS2_32.dll!getaddrinfo                 +0x461    (0x00007ffbc28a3b72 <WS2_32.dll+0x3b72>)
+# 5 WS2_32.dll!WSASocketW                  +0x3b5    (0x00007ffbc28a5a66 <WS2_32.dll+0x5a66>)
+# 6 WS2_32.dll!WSASocketW                  +0xae     (0x00007ffbc28a575f <WS2_32.dll+0x575f>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 8 Server::Listen   
+# 9 Server::start    
+#10 main             
+Note: @0:09:13.363 in thread 8916
+
+Potential Error #38: HANDLE LEAK: KERNEL handle 0x0000000000000160 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateFile
+# 1 MSWSOCK.dll!?                         +0x0      (0x00007ffbc023764e <MSWSOCK.dll+0x764e>)
+# 2 MSWSOCK.dll!?                         +0x0      (0x00007ffbc0236fda <MSWSOCK.dll+0x6fda>)
+# 3 WS2_32.dll!WSASocketW                 +0x12f    (0x00007ffbc28a57e0 <WS2_32.dll+0x57e0>)
+# 4 WS2_32.dll!socket                     +0x6d     (0x00007ffbc28a565e <WS2_32.dll+0x565e>)
+# 5 Server::Listen   
+# 6 Server::start    
+# 7 main             
+Note: @0:09:13.375 in thread 8916
+
+Potential Error #39: HANDLE LEAK: KERNEL handle 0x0000000000000168 and 1 similar handle(s) were opened but not closed:
+# 0 system call NtDuplicateObject
+# 1 KERNELBASE.dll!DuplicateHandle
+# 2 WS2_32.dll!WahOpenCurrentThread            +0x6a     (0x00007ffbc28af22b <WS2_32.dll+0xf22b>)
+# 3 WS2_32.dll!WSAStartup                      +0x678    (0x00007ffbc28af189 <WS2_32.dll+0xf189>)
+# 4 WS2_32.dll!WSAStartup                      +0x58e    (0x00007ffbc28af09f <WS2_32.dll+0xf09f>)
+# 5 WS2_32.dll!WSAStartup                      +0x45d    (0x00007ffbc28aef6e <WS2_32.dll+0xef6e>)
+# 6 WS2_32.dll!recv                            +0x4a     (0x00007ffbc28b1ddb <WS2_32.dll+0x11ddb>)
+# 7 Thread::Rec      
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:13.382 in thread 8916
+
+Potential Error #40: HANDLE LEAK: KERNEL handle 0x000000000000016c and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateSemaphore                            
+# 1 ntdll.dll!RtlInitializeResource
+# 2 bcrypt.dll!BCryptGetProperty                                           +0x6fe    (0x00007ffbc0aa4b8f <bcrypt.dll+0x4b8f>)
+# 3 bcrypt.dll!BCryptGetProperty                                           +0x685    (0x00007ffbc0aa4b16 <bcrypt.dll+0x4b16>)
+# 4 bcrypt.dll!BCryptSetAuditingInterface                                  +0x5b6    (0x00007ffbc0aa9447 <bcrypt.dll+0x9447>)
+# 5 ntdll.dll!LdrpCallInitRoutine
+# 6 ntdll.dll!LdrpInitializeNode
+# 7 ntdll.dll!LdrpInitializeNode
+# 8 ntdll.dll!LdrpInitializeGraphRecurse
+# 9 ntdll.dll!LdrpInitializeGraphRecurse
+#10 ntdll.dll!LdrpPrepareModuleForExecution
+#11 ntdll.dll!LdrpLoadDllInternal
+#12 ntdll.dll!LdrpLoadForwardedDll
+#13 ntdll.dll!LdrpLoadForwardedDll
+#14 ntdll.dll!LdrpGetDelayloadExportDll
+#15 ntdll.dll!LdrpHandleProtectedDelayload
+#16 ntdll.dll!LdrResolveDelayLoadedAPI
+#17 KERNELBASE.dll!_delayLoadHelper2
+#18 KERNELBASE.dll!_tailMerge_api_ms_win_security_isolationpolicy_l1_2_0_dll
+#19 msvcrt.dll!system                                                      +0x973    (0x00007ffbc19b87c4 <msvcrt.dll+0x187c4>)
+Note: @0:09:13.393 in thread 8916
+
+Potential Error #41: HANDLE LEAK: KERNEL handle 0x0000000000000170 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateSemaphore                            
+# 1 ntdll.dll!RtlInitializeResource
+# 2 bcrypt.dll!BCryptGetProperty                                           +0x6fe    (0x00007ffbc0aa4b8f <bcrypt.dll+0x4b8f>)
+# 3 bcrypt.dll!BCryptGetProperty                                           +0x685    (0x00007ffbc0aa4b16 <bcrypt.dll+0x4b16>)
+# 4 bcrypt.dll!BCryptSetAuditingInterface                                  +0x5b6    (0x00007ffbc0aa9447 <bcrypt.dll+0x9447>)
+# 5 ntdll.dll!LdrpCallInitRoutine
+# 6 ntdll.dll!LdrpInitializeNode
+# 7 ntdll.dll!LdrpInitializeNode
+# 8 ntdll.dll!LdrpInitializeGraphRecurse
+# 9 ntdll.dll!LdrpInitializeGraphRecurse
+#10 ntdll.dll!LdrpPrepareModuleForExecution
+#11 ntdll.dll!LdrpLoadDllInternal
+#12 ntdll.dll!LdrpLoadForwardedDll
+#13 ntdll.dll!LdrpLoadForwardedDll
+#14 ntdll.dll!LdrpGetDelayloadExportDll
+#15 ntdll.dll!LdrpHandleProtectedDelayload
+#16 ntdll.dll!LdrResolveDelayLoadedAPI
+#17 KERNELBASE.dll!_delayLoadHelper2
+#18 KERNELBASE.dll!_tailMerge_api_ms_win_security_isolationpolicy_l1_2_0_dll
+#19 msvcrt.dll!system                                                      +0x973    (0x00007ffbc19b87c4 <msvcrt.dll+0x187c4>)
+Note: @0:09:13.394 in thread 8916
+
+Potential Error #42: HANDLE LEAK: KERNEL handle 0x0000000000000174 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateEvent                                
+# 1 KERNELBASE.dll!CreateEventW  
+# 2 bcrypt.dll!BCryptGetProperty                                           +0x8d3    (0x00007ffbc0aa4d64 <bcrypt.dll+0x4d64>)
+# 3 bcrypt.dll!BCryptGetProperty                                           +0x7a8    (0x00007ffbc0aa4c39 <bcrypt.dll+0x4c39>)
+# 4 bcrypt.dll!BCryptGetProperty                                           +0x685    (0x00007ffbc0aa4b16 <bcrypt.dll+0x4b16>)
+# 5 bcrypt.dll!BCryptSetAuditingInterface                                  +0x5b6    (0x00007ffbc0aa9447 <bcrypt.dll+0x9447>)
+# 6 ntdll.dll!LdrpCallInitRoutine
+# 7 ntdll.dll!LdrpInitializeNode
+# 8 ntdll.dll!LdrpInitializeNode
+# 9 ntdll.dll!LdrpInitializeGraphRecurse
+#10 ntdll.dll!LdrpInitializeGraphRecurse
+#11 ntdll.dll!LdrpPrepareModuleForExecution
+#12 ntdll.dll!LdrpLoadDllInternal
+#13 ntdll.dll!LdrpLoadForwardedDll
+#14 ntdll.dll!LdrpLoadForwardedDll
+#15 ntdll.dll!LdrpGetDelayloadExportDll
+#16 ntdll.dll!LdrpHandleProtectedDelayload
+#17 ntdll.dll!LdrResolveDelayLoadedAPI
+#18 KERNELBASE.dll!_delayLoadHelper2
+#19 KERNELBASE.dll!_tailMerge_api_ms_win_security_isolationpolicy_l1_2_0_dll
+Note: @0:09:13.395 in thread 8916
+
+Potential Error #43: HANDLE LEAK: KERNEL handle 0x0000000000000178 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenFile       
+# 1 bcrypt.dll!BCryptOpenAlgorithmProvider     +0x1aa1   (0x00007ffbc0aa7502 <bcrypt.dll+0x7502>)
+# 2 bcrypt.dll!BCryptOpenAlgorithmProvider     +0x1835   (0x00007ffbc0aa7296 <bcrypt.dll+0x7296>)
+# 3 bcrypt.dll!BCryptGetProperty               +0x962    (0x00007ffbc0aa4df3 <bcrypt.dll+0x4df3>)
+# 4 bcrypt.dll!BCryptGetProperty               +0x7a8    (0x00007ffbc0aa4c39 <bcrypt.dll+0x4c39>)
+# 5 bcrypt.dll!BCryptGetProperty               +0x685    (0x00007ffbc0aa4b16 <bcrypt.dll+0x4b16>)
+# 6 bcrypt.dll!BCryptSetAuditingInterface      +0x5b6    (0x00007ffbc0aa9447 <bcrypt.dll+0x9447>)
+# 7 ntdll.dll!LdrpCallInitRoutine
+# 8 ntdll.dll!LdrpInitializeNode
+# 9 ntdll.dll!LdrpInitializeNode
+#10 ntdll.dll!LdrpInitializeGraphRecurse
+#11 ntdll.dll!LdrpInitializeGraphRecurse
+#12 ntdll.dll!LdrpPrepareModuleForExecution
+#13 ntdll.dll!LdrpLoadDllInternal
+#14 ntdll.dll!LdrpLoadForwardedDll
+#15 ntdll.dll!LdrpLoadForwardedDll
+#16 ntdll.dll!LdrpGetDelayloadExportDll
+#17 ntdll.dll!LdrpHandleProtectedDelayload
+#18 ntdll.dll!LdrResolveDelayLoadedAPI
+#19 KERNELBASE.dll!_delayLoadHelper2
+Note: @0:09:13.396 in thread 8916
+
+Potential Error #44: HANDLE LEAK: KERNEL handle 0x000000000000017c and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey            
+# 1 ntdll.dll!RtlpOpenBaseImageFileOptionsKeyEx
+# 2 ntdll.dll!RtlpOpenBaseImageFileOptionsKey
+# 3 ntdll.dll!RtlpOpenImageFileOptionsKeyEx
+# 4 ntdll.dll!RtlQueryImageFileExecutionOptions
+# 5 KERNELBASE.dll!QueryChpeConfiguration
+# 6 KERNELBASE.dll!CreateProcessInternalW
+# 7 KERNELBASE.dll!CreateProcessInternalA
+# 8 KERNELBASE.dll!CreateProcessA
+# 9 KERNEL32.dll!CreateProcessAStub
+#10 msvcrt.dll!system                              +0x973    (0x00007ffbc19b87c4 <msvcrt.dll+0x187c4>)
+#11 msvcrt.dll!spawnve                             +0x30b    (0x00007ffbc19b65ec <msvcrt.dll+0x165ec>)
+#12 msvcrt.dll!spawnve                             +0x17d    (0x00007ffbc19b645e <msvcrt.dll+0x1645e>)
+#13 msvcrt.dll!system                              +0xaf     (0x00007ffbc19b7f00 <msvcrt.dll+0x17f00>)
+#14 main             
+Note: @0:09:13.399 in thread 8916
+
+Potential Error #45: HANDLE LEAK: KERNEL handle 0x0000000000000190 and 1 similar handle(s) were opened but not closed:
+# 0 system call NtCreateEvent
+# 1 MSWSOCK.dll!?                          +0x0      (0x00007ffbc023a293 <MSWSOCK.dll+0xa293>)
+# 2 MSWSOCK.dll!?                          +0x0      (0x00007ffbc023a236 <MSWSOCK.dll+0xa236>)
+# 3 MSWSOCK.dll!NSPStartup                 +0x84c    (0x00007ffbc023d44d <MSWSOCK.dll+0xd44d>)
+# 4 WS2_32.dll!recv                        +0xc0     (0x00007ffbc28b1e51 <WS2_32.dll+0x11e51>)
+# 5 Thread::Rec      
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:13.407 in thread 8916
+
+Potential Error #46: HANDLE LEAK: KERNEL handle 0x0000000000000198 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateFile
+# 1 KERNELBASE.dll!CreateFileInternal
+# 2 KERNELBASE.dll!CreateFileA   
+# 3 msvcrt.dll!sopen_s                    +0x2ad    (0x00007ffbc19bdb2e <msvcrt.dll+0x1db2e>)
+# 4 msvcrt.dll!sopen                      +0xce     (0x00007ffbc19bd82f <msvcrt.dll+0x1d82f>)
+# 5 msvcrt.dll!sopen_s                    +0x2c     (0x00007ffbc19bd8ad <msvcrt.dll+0x1d8ad>)
+# 6 msvcrt.dll!ungetwc                    +0x6bbb   (0x00007ffbc19f5e9c <msvcrt.dll+0x55e9c>)
+# 7 msvcrt.dll!fsopen                     +0xd0     (0x00007ffbc19e7a81 <msvcrt.dll+0x47a81>)
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:13.420 in thread 8916
+Note: handles created with the same callstack are closed here:
+Note: # 0 system call NtClose         
+Note: # 1 KERNELBASE.dll!CloseHandle   
+Note: # 2 msvcrt.dll!close                          +0x161    (0x00007ffbc19bada2 <msvcrt.dll+0x1ada2>)
+Note: # 3 msvcrt.dll!close                          +0xa0     (0x00007ffbc19bace1 <msvcrt.dll+0x1ace1>)
+Note: # 4 msvcrt.dll!clearerr_s                     +0x117    (0x00007ffbc19ec9d8 <msvcrt.dll+0x4c9d8>)
+Note: # 5 msvcrt.dll!fclose                         +0x5f     (0x00007ffbc19eca70 <msvcrt.dll+0x4ca70>)
+Note: # 6 std::__basic_file<>::close                 [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+Note: # 7 std::basic_filebuf<>::close                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+Note: # 8 std::basic_ifstream<>::close               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+Note: # 9 Person::initialize_goods
+Note: #10 Person::buy      
+Note: #11 Customer::home   
+Note: #12 Person::login    
+Note: #13 Customer::start  
+Note: #14 PROGRAM          
+Note: #15 worker           
+Note: #16 KERNEL32.dll!BaseThreadInitThunk
+
+Potential Error #47: HANDLE LEAK: KERNEL handle 0x000000000000019c and 0 similar handle(s) were opened but not closed:
+# 0 system call NtOpenKey             
+# 1 KERNEL32.dll!CompatCachepUserPermLayerExists
+# 2 KERNEL32.dll!CompatCacheLookupAndWriteToProcess
+# 3 KERNEL32.dll!BasepQueryAppCompat
+# 4 KERNELBASE.dll!CreateProcessInternalW
+# 5 KERNELBASE.dll!CreateProcessInternalA
+# 6 KERNELBASE.dll!CreateProcessA
+# 7 KERNEL32.dll!CreateProcessAStub
+# 8 msvcrt.dll!system                               +0x973    (0x00007ffbc19b87c4 <msvcrt.dll+0x187c4>)
+# 9 msvcrt.dll!spawnve                              +0x30b    (0x00007ffbc19b65ec <msvcrt.dll+0x165ec>)
+#10 msvcrt.dll!spawnve                              +0x17d    (0x00007ffbc19b645e <msvcrt.dll+0x1645e>)
+#11 msvcrt.dll!system                               +0xaf     (0x00007ffbc19b7f00 <msvcrt.dll+0x17f00>)
+#12 main             
+Note: @0:09:13.486 in thread 8916
+
+Potential Error #48: HANDLE LEAK: KERNEL handle 0x00000000000001a4 and 1 similar handle(s) were opened but not closed:
+# 0 system call NtCreateFile
+# 1 MSWSOCK.dll!?                         +0x0      (0x00007ffbc023764e <MSWSOCK.dll+0x764e>)
+# 2 MSWSOCK.dll!?                         +0x0      (0x00007ffbc0231c58 <MSWSOCK.dll+0x1c58>)
+# 3 WS2_32.dll!WSAAccept                  +0xd2     (0x00007ffbc28b1453 <WS2_32.dll+0x11453>)
+# 4 WS2_32.dll!accept                     +0x11     (0x00007ffbc28b1372 <WS2_32.dll+0x11372>)
+# 5 Server::processReq
+# 6 Server::run      
+# 7 main             
+Note: @0:09:13.495 in thread 8916
+
+Potential Error #49: HANDLE LEAK: KERNEL handle 0x00000000000001a8 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateSemaphore                               
+# 1 KERNELBASE.dll!CreateSemaphoreExW
+# 2 KERNEL32.dll!CreateSemaphoreExA
+# 3 KERNEL32.dll!CreateSemaphoreA
+# 4 pthread_cond_init                                                          [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 5 pthread_rwlock_init                                                        [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 rwlock_static_init                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 7 rwl_ref.isra.0                                                             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 pthread_rwlock_wrlock                                                      [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 9 pthread_key_create                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#10 emutls_init                                                                [C:\temp\gcc\build\x86_64-w64-mingw32\libgcc/./gthr-default.h:708]
+#11 pthread_once                                                               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#12 __emutls_get_address                                                       [C:\temp\gcc\build\x86_64-w64-mingw32\libgcc/./gthr-default.h:700]
+#13 __cxa_throw                                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#14 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#15 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#16 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#17 Person::initialize_cash
+#18 Person::buy      
+#19 Customer::home   
+Note: @0:09:13.588 in thread 8916
+
+Potential Error #50: HANDLE LEAK: KERNEL handle 0x00000000000001dc and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateSemaphore                               
+# 1 KERNELBASE.dll!CreateSemaphoreExW
+# 2 KERNEL32.dll!CreateSemaphoreExA
+# 3 KERNEL32.dll!CreateSemaphoreA
+# 4 pthread_cond_init                                                          [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 5 pthread_rwlock_init                                                        [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 rwlock_static_init                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 7 rwl_ref.isra.0                                                             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 pthread_rwlock_wrlock                                                      [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 9 pthread_key_create                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#10 emutls_init                                                                [C:\temp\gcc\build\x86_64-w64-mingw32\libgcc/./gthr-default.h:733]
+#11 pthread_once                                                               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#12 __emutls_get_address                                                       [C:\temp\gcc\build\x86_64-w64-mingw32\libgcc/./gthr-default.h:700]
+#13 __cxa_throw                                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#14 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#15 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#16 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+#17 Person::initialize_cash
+#18 Person::buy      
+#19 Customer::home   
+Note: @0:09:13.632 in thread 8916
+
+Potential Error #51: HANDLE LEAK: KERNEL handle 0x00000000000001f8 and 0 similar handle(s) were opened but not closed:
+# 0 system call NtCreateEvent                                   
+# 1 KERNELBASE.dll!CreateEventA  
+# 2 __pthread_self_lite                                                        [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 pthread_once                                                               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 __emutls_get_address                                                       [C:\temp\gcc\build\x86_64-w64-mingw32\libgcc/./gthr-default.h:700]
+# 5 __cxa_throw                                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 7 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 9 Person::initialize_cash
+#10 Person::buy      
+#11 Customer::home   
+#12 Person::login    
+#13 Customer::start  
+#14 PROGRAM          
+#15 worker           
+#16 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:13.676 in thread 8916
+
+Potential Error #52: HANDLE LEAK: KERNEL handle 0x00000000000001fc and 0 similar handle(s) were opened but not closed:
+# 0 system call NtDuplicateObject                               
+# 1 KERNELBASE.dll!DuplicateHandle
+# 2 __pthread_self_lite                                                        [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 3 pthread_once                                                               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 __emutls_get_address                                                       [C:\temp\gcc\build\x86_64-w64-mingw32\libgcc/./gthr-default.h:700]
+# 5 __cxa_throw                                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 std::__throw_invalid_argument                                              [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 7 _ZN9__gnu_cxx6__stoaIddcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PyS9_             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 std::__cxx11::stod                                                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 9 Person::initialize_cash
+#10 Person::buy      
+#11 Customer::home   
+#12 Person::login    
+#13 Customer::start  
+#14 PROGRAM          
+#15 worker           
+#16 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:09:13.729 in thread 8916
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+	Potential Error #   8:     14
+	Potential Error #   9:     14
+	Potential Error #  10:      8
+	Potential Error #  11:      8
+	Potential Error #  12:      8
+	Potential Error #  13:      8
+	Potential Error #  22:      2
+	Potential Error #  25:      3
+	Potential Error #  26:      3
+	Potential Error #  33:      5
+	Potential Error #  39:      2
+	Potential Error #  45:      2
+	Potential Error #  48:      2
+
+POTENTIAL ERRORS FOUND:
+      2 unique,     2 total potential unaddressable access(es)
+     24 unique,    83 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+     25 unique,    32 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      1 unique,     1 total,    114 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: C:\Users\Dida\Desktop\2024_Analysis_online-shopping-system\online-shopping-system\Server\ServerLogs\DrMemory-serverProgram.exe.7156.000\potential_errors.txt

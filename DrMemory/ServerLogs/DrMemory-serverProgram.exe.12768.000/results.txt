@@ -1,0 +1,2102 @@
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:38:58
+Windows version: WinVer=105;Rel=2009;Build=19045;Edition=Professional
+Dr. Memory results for pid 12768: "serverProgram.exe"
+Application cmdline: "serverProgram.exe"
+Recorded 124 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin64\suppress-default.txt
+
+Error #1: UNADDRESSABLE ACCESS beyond top of stack: reading 0x00000000007dfb00-0x00000000007dfb08 8 byte(s)
+# 0 ___chkstk_ms                            [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 _pei386_runtime_relocator               [../../src/mingw-w64-crt/crt/pseudo-reloc.c:472]
+# 2 __tmainCRTStartup
+# 3 .l_start         
+# 4 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:00:02.107 in thread 12732
+Note: 0x00000000007dfb00 refers to 664 byte(s) beyond the top of the stack 0x00000000007dfd98
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #2: UNINITIALIZED READ: reading register eax
+# 0 WS2_32.dll!WSALookupServiceNextW   +0x23f1   (0x00007ffeb918ded1 <WS2_32.dll+0xded1>)
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 2 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 3 Server::start    
+# 4 main             
+Note: @0:00:03.113 in thread 12732
+Note: instruction: cmp    %eax %r12d
+
+Error #3: UNINITIALIZED READ: reading register eflags
+# 0 WS2_32.dll!WSALookupServiceNextW   +0x240f   (0x00007ffeb918deef <WS2_32.dll+0xdeef>)
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 2 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 3 Server::start    
+# 4 main             
+Note: @0:00:03.119 in thread 12732
+Note: instruction: cmovo  %r13 -> %rax
+
+Error #4: UNINITIALIZED READ: reading 0x00000000007df770-0x00000000007df774 4 byte(s) within 0x00000000007df770-0x00000000007df778
+# 0 replace_memset                      [D:\a\drmemory\drmemory\drmemory\replace.c:194]
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x2448   (0x00007ffeb918df29 <WS2_32.dll+0xdf29>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 3 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 4 Server::start    
+# 5 main             
+Note: @0:00:03.239 in thread 12732
+Note: instruction: cmp    0x30(%rsp) $0x0000000000000003
+
+Error #5: UNINITIALIZED READ: reading register r9
+# 0 WS2_32.dll!closesocket      +0x6d     (0x00007ffeb918506d <WS2_32.dll+0x506d>)
+# 1 Server::Listen   
+# 2 Server::start    
+# 3 main             
+Note: @0:00:04.015 in thread 12732
+Note: instruction: lock xadd   0x10(%r9) %ecx -> 0x10(%r9) %ecx
+
+Error #6: UNINITIALIZED READ: reading register rcx
+# 0 WS2_32.dll!WSAUnhookBlockingHook   +0x6ef    (0x00007ffeb91a4b1f <WS2_32.dll+0x24b1f>)
+# 1 WS2_32.dll!getnameinfo             +0x4b35   (0x00007ffeb9198bf6 <WS2_32.dll+0x18bf6>)
+# 2 Server::Listen   
+# 3 Server::start    
+# 4 main             
+Note: @0:00:04.024 in thread 12732
+Note: instruction: cmp    %rcx $0xffffffffffffffff
+
+Error #7: UNINITIALIZED READ: reading 0x00000000007df64c-0x00000000007df650 4 byte(s) within 0x00000000007df5d0-0x00000000007df654
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60589e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60558f7 <MSWSOCK.dll+0x58f7>)
+# 3 WS2_32.dll!bind                                                           +0x8f     (0x00007ffeb9190a50 <WS2_32.dll+0x10a50>)
+# 4 Server::Listen   
+# 5 Server::start    
+# 6 main             
+Note: @0:00:05.271 in thread 12732
+
+Error #8: UNINITIALIZED READ: reading 0x00000000007df6dc-0x00000000007df6e0 4 byte(s) within 0x00000000007df660-0x00000000007df6e4
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60589e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb6052a29 <MSWSOCK.dll+0x2a29>)
+# 3 WS2_32.dll!listen                                                         +0x64     (0x00007ffeb9191305 <WS2_32.dll+0x11305>)
+# 4 Server::Listen   
+# 5 Server::start    
+# 6 main             
+Note: @0:00:05.298 in thread 12732
+
+Error #9: UNINITIALIZED READ: reading register rcx
+# 0 WS2_32.dll!_WSAFDIsSet          +0x19     (0x00007ffeb91928f9 <WS2_32.dll+0x128f9>)
+# 1 Server::processReq
+# 2 Server::run      
+# 3 main             
+Note: @0:01:37.848 in thread 12732
+Note: instruction: cmp    (%r9) %rcx
+
+Error #10: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255ecb8-0x000000000255ecc0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 PROGRAM          
+# 3 worker           
+# 4 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:01:37.916 in thread 18716
+Note: 0x000000000255ecb8 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fca0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #11: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255ec50-0x000000000255ec58 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 PROGRAM          
+# 3 worker           
+# 4 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:01:37.958 in thread 18716
+Note: 0x000000000255ec50 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fca0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #12: UNINITIALIZED READ: reading 0x000000000255eb3c-0x000000000255eb40 4 byte(s) within 0x000000000255eb28-0x000000000255eb40
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:01:37.980 in thread 18716
+
+Error #13: UNINITIALIZED READ: reading 0x000000000255ec1c-0x000000000255ec20 4 byte(s) within 0x000000000255ec18-0x000000000255ec28
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:01:37.987 in thread 18716
+
+Error #14: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255ec48-0x000000000255ec50 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Customer::start  
+# 3 PROGRAM          
+# 4 worker           
+# 5 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:13.154 in thread 18716
+Note: 0x000000000255ec48 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fc30
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #15: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255ebe0-0x000000000255ebe8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Customer::start  
+# 3 PROGRAM          
+# 4 worker           
+# 5 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:13.165 in thread 18716
+Note: 0x000000000255ebe0 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fc30
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #16: UNINITIALIZED READ: reading 0x000000000255eacc-0x000000000255ead0 4 byte(s) within 0x000000000255eab8-0x000000000255ead0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:13.178 in thread 18716
+
+Error #17: UNINITIALIZED READ: reading 0x000000000255ebac-0x000000000255ebb0 4 byte(s) within 0x000000000255eba8-0x000000000255ebb8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:03:13.190 in thread 18716
+
+Error #18: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:32:50.204 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #19: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:32:50.219 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #20: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:32:50.235 in thread 18716
+
+Error #21: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:32:50.250 in thread 18716
+
+Error #22: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.148 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #23: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.164 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #24: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.179 in thread 18716
+
+Error #25: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.195 in thread 18716
+
+Error #26: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.211 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #27: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.225 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #28: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.241 in thread 18716
+
+Error #29: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.256 in thread 18716
+
+Error #30: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.272 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #31: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.286 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #32: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.300 in thread 18716
+
+Error #33: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.314 in thread 18716
+
+Error #34: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.330 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #35: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.344 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #36: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.358 in thread 18716
+
+Error #37: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.372 in thread 18716
+
+Error #38: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.387 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #39: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.401 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #40: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.416 in thread 18716
+
+Error #41: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.430 in thread 18716
+
+Error #42: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.445 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #43: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.460 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #44: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.474 in thread 18716
+
+Error #45: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.488 in thread 18716
+
+Error #46: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.505 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #47: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.519 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #48: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.534 in thread 18716
+
+Error #49: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.549 in thread 18716
+
+Error #50: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.564 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #51: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.578 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #52: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.593 in thread 18716
+
+Error #53: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.607 in thread 18716
+
+Error #54: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb78-0x000000000255eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.624 in thread 18716
+Note: 0x000000000255eb78 refers to 4072 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #55: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000255eb10-0x000000000255eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.638 in thread 18716
+Note: 0x000000000255eb10 refers to 4176 byte(s) beyond the top of the stack 0x000000000255fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #56: UNINITIALIZED READ: reading 0x000000000255e9fc-0x000000000255ea00 4 byte(s) within 0x000000000255e9e8-0x000000000255ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.653 in thread 18716
+
+Error #57: UNINITIALIZED READ: reading 0x000000000255eadc-0x000000000255eae0 4 byte(s) within 0x000000000255ead8-0x000000000255eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:36:56.668 in thread 18716
+
+Error #58: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000000002d7e918-0x0000000002d7e920 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:38.636 in thread 1832
+Note: 0x0000000002d7e918 refers to 4072 byte(s) beyond the top of the stack 0x0000000002d7f900
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #59: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000000002d7e8b0-0x0000000002d7e8b8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:38.659 in thread 1832
+Note: 0x0000000002d7e8b0 refers to 4176 byte(s) beyond the top of the stack 0x0000000002d7f900
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #60: UNINITIALIZED READ: reading 0x0000000002d7e79c-0x0000000002d7e7a0 4 byte(s) within 0x0000000002d7e788-0x0000000002d7e7a0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:38.682 in thread 1832
+
+Error #61: UNINITIALIZED READ: reading 0x0000000002d7e87c-0x0000000002d7e880 4 byte(s) within 0x0000000002d7e878-0x0000000002d7e888
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:38.696 in thread 1832
+
+Error #62: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000000002d7e918-0x0000000002d7e920 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:53.668 in thread 1832
+Note: 0x0000000002d7e918 refers to 4072 byte(s) beyond the top of the stack 0x0000000002d7f900
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #63: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000000002d7e8b0-0x0000000002d7e8b8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:53.686 in thread 1832
+Note: 0x0000000002d7e8b0 refers to 4176 byte(s) beyond the top of the stack 0x0000000002d7f900
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #64: UNINITIALIZED READ: reading 0x0000000002d7e79c-0x0000000002d7e7a0 4 byte(s) within 0x0000000002d7e788-0x0000000002d7e7a0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:53.698 in thread 1832
+
+Error #65: UNINITIALIZED READ: reading 0x0000000002d7e87c-0x0000000002d7e880 4 byte(s) within 0x0000000002d7e878-0x0000000002d7e888
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:53.710 in thread 1832
+
+Error #66: UNINITIALIZED READ: reading 0x0000000002d7f8c0-0x0000000002d7f8c4 4 byte(s)
+# 0 msvcrt.dll!getch                 +0xcf     (0x00007ffeb843bb7f <msvcrt.dll+0x1bb7f>)
+# 1 msvcrt.dll!getch                 +0x15     (0x00007ffeb843bac6 <msvcrt.dll+0x1bac6>)
+# 2 Person::login    
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:45:53.815 in thread 1832
+Note: instruction: cmp    0xffffffd0(%rbp) $0x00000000
+
+Error #67: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000000002f7eb78-0x0000000002f7eb80 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:54:25.869 in thread 6132
+Note: 0x0000000002f7eb78 refers to 4072 byte(s) beyond the top of the stack 0x0000000002f7fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #68: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000000002f7eb10-0x0000000002f7eb18 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::input    
+# 3 Customer::signup 
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:54:25.954 in thread 6132
+Note: 0x0000000002f7eb10 refers to 4176 byte(s) beyond the top of the stack 0x0000000002f7fb60
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #69: UNINITIALIZED READ: reading 0x0000000002f7e9fc-0x0000000002f7ea00 4 byte(s) within 0x0000000002f7e9e8-0x0000000002f7ea00
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:54:26.028 in thread 6132
+
+Error #70: UNINITIALIZED READ: reading 0x0000000002f7eadc-0x0000000002f7eae0 4 byte(s) within 0x0000000002f7ead8-0x0000000002f7eae8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:54:26.047 in thread 6132
+
+Error #71: UNADDRESSABLE ACCESS beyond top of stack: reading 0x0000000002f7d000-0x0000000002f7d001 1 byte(s)
+# 0 msvcrt.dll!setjmpex                                       +0x1f7    (0x00007ffeb8492f57 <msvcrt.dll+0x72f57>)
+# 1 msvcrt.dll!write                                          +0x125    (0x00007ffeb843fbf6 <msvcrt.dll+0x1fbf6>)
+# 2 msvcrt.dll!write                                          +0x96     (0x00007ffeb843fb67 <msvcrt.dll+0x1fb67>)
+# 3 std::__basic_file<>::xsputn                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 std::basic_filebuf<>::_M_convert_to_external               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 5 std::basic_filebuf<>::overflow                             [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 std::basic_filebuf<>::sync                                 [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 7 std::endl<>                                                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 Person::transfer_to_file
+# 9 Person::input    
+#10 Customer::signup 
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:54:26.265 in thread 6132
+Note: 0x0000000002f7d000 refers to 9960 byte(s) beyond the top of the stack 0x0000000002f7f6e8
+Note: instruction: test   (%r11) %r11l
+
+Error #72: UNINITIALIZED READ: reading 0x0000000002f7fa54-0x0000000002f7fa58 4 byte(s) within 0x0000000002f7fa40-0x0000000002f7fa58
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:54:26.748 in thread 6132
+
+Error #73: UNINITIALIZED READ: reading 0x0000000002f7fb1c-0x0000000002f7fb20 4 byte(s) within 0x0000000002f7fb18-0x0000000002f7fb28
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::input    
+# 5 Customer::signup 
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:54:26.773 in thread 6132
+
+Error #74: UNINITIALIZED READ: reading 0x0000000002f7fbc0-0x0000000002f7fbc4 4 byte(s)
+# 0 msvcrt.dll!getch                 +0xcf     (0x00007ffeb843bb7f <msvcrt.dll+0x1bb7f>)
+# 1 msvcrt.dll!getch                 +0x15     (0x00007ffeb843bac6 <msvcrt.dll+0x1bac6>)
+# 2 Customer::signup 
+# 3 Customer::start  
+# 4 PROGRAM          
+# 5 worker           
+# 6 KERNEL32.dll!BaseThreadInitThunk
+Note: @0:54:26.864 in thread 6132
+Note: instruction: cmp    0xffffffd0(%rbp) $0x00000000
+
+Error #75: UNINITIALIZED READ: reading 0x000000000317f7f4-0x000000000317f7f8 4 byte(s) within 0x000000000317f7e0-0x000000000317f7f8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:03:54.914 in thread 15480
+
+Error #76: UNINITIALIZED READ: reading 0x000000000317f8bc-0x000000000317f8c0 4 byte(s) within 0x000000000317f8b8-0x000000000317f8c8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:03:54.959 in thread 15480
+
+Error #77: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317e5e8-0x000000000317e5f0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:03:55.036 in thread 15480
+Note: 0x000000000317e5e8 refers to 4072 byte(s) beyond the top of the stack 0x000000000317f5d0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #78: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317e580-0x000000000317e588 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:03:55.116 in thread 15480
+Note: 0x000000000317e580 refers to 4176 byte(s) beyond the top of the stack 0x000000000317f5d0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #79: UNINITIALIZED READ: reading 0x000000000317e46c-0x000000000317e470 4 byte(s) within 0x000000000317e458-0x000000000317e470
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:03:55.175 in thread 15480
+
+Error #80: UNINITIALIZED READ: reading 0x000000000317e54c-0x000000000317e550 4 byte(s) within 0x000000000317e548-0x000000000317e558
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:03:55.196 in thread 15480
+
+Error #81: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317e5e8-0x000000000317e5f0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:28.681 in thread 15480
+Note: 0x000000000317e5e8 refers to 4072 byte(s) beyond the top of the stack 0x000000000317f5d0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #82: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317e580-0x000000000317e588 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:28.765 in thread 15480
+Note: 0x000000000317e580 refers to 4176 byte(s) beyond the top of the stack 0x000000000317f5d0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #83: UNINITIALIZED READ: reading 0x000000000317e46c-0x000000000317e470 4 byte(s) within 0x000000000317e458-0x000000000317e470
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:28.829 in thread 15480
+
+Error #84: UNINITIALIZED READ: reading 0x000000000317e54c-0x000000000317e550 4 byte(s) within 0x000000000317e548-0x000000000317e558
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:28.888 in thread 15480
+
+Error #85: UNINITIALIZED READ: reading 0x000000000317f4c4-0x000000000317f4c8 4 byte(s) within 0x000000000317f4b0-0x000000000317f4c8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:29.285 in thread 15480
+
+Error #86: UNINITIALIZED READ: reading 0x000000000317f58c-0x000000000317f590 4 byte(s) within 0x000000000317f588-0x000000000317f598
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:29.384 in thread 15480
+
+Error #87: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317e2b8-0x000000000317e2c0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:29.476 in thread 15480
+Note: 0x000000000317e2b8 refers to 4072 byte(s) beyond the top of the stack 0x000000000317f2a0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #88: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317e250-0x000000000317e258 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:29.649 in thread 15480
+Note: 0x000000000317e250 refers to 4176 byte(s) beyond the top of the stack 0x000000000317f2a0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #89: UNINITIALIZED READ: reading 0x000000000317e13c-0x000000000317e140 4 byte(s) within 0x000000000317e128-0x000000000317e140
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:29.889 in thread 15480
+
+Error #90: UNINITIALIZED READ: reading 0x000000000317e21c-0x000000000317e220 4 byte(s) within 0x000000000317e218-0x000000000317e228
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:30.012 in thread 15480
+
+Error #91: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317e2b8-0x000000000317e2c0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.457 in thread 15480
+Note: 0x000000000317e2b8 refers to 4072 byte(s) beyond the top of the stack 0x000000000317f2a0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #92: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317e250-0x000000000317e258 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.523 in thread 15480
+Note: 0x000000000317e250 refers to 4176 byte(s) beyond the top of the stack 0x000000000317f2a0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #93: UNINITIALIZED READ: reading 0x000000000317e13c-0x000000000317e140 4 byte(s) within 0x000000000317e128-0x000000000317e140
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.579 in thread 15480
+
+Error #94: UNINITIALIZED READ: reading 0x000000000317e21c-0x000000000317e220 4 byte(s) within 0x000000000317e218-0x000000000317e228
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.613 in thread 15480
+
+Error #95: UNINITIALIZED READ: reading 0x000000000317f194-0x000000000317f198 4 byte(s) within 0x000000000317f180-0x000000000317f198
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.716 in thread 15480
+
+Error #96: UNINITIALIZED READ: reading 0x000000000317f25c-0x000000000317f260 4 byte(s) within 0x000000000317f258-0x000000000317f268
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.761 in thread 15480
+
+Error #97: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317df88-0x000000000317df90 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.845 in thread 15480
+Note: 0x000000000317df88 refers to 4072 byte(s) beyond the top of the stack 0x000000000317ef70
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #98: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317df20-0x000000000317df28 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.908 in thread 15480
+Note: 0x000000000317df20 refers to 4176 byte(s) beyond the top of the stack 0x000000000317ef70
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #99: UNINITIALIZED READ: reading 0x000000000317de0c-0x000000000317de10 4 byte(s) within 0x000000000317ddf8-0x000000000317de10
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Customer::start  
+# 9 PROGRAM          
+#10 worker           
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:48.972 in thread 15480
+
+Error #100: UNINITIALIZED READ: reading 0x000000000317deec-0x000000000317def0 4 byte(s) within 0x000000000317dee8-0x000000000317def8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Customer::start  
+# 9 PROGRAM          
+#10 worker           
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:04:49.019 in thread 15480
+
+Error #101: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317df88-0x000000000317df90 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:07.454 in thread 15480
+Note: 0x000000000317df88 refers to 4072 byte(s) beyond the top of the stack 0x000000000317ef70
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #102: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317df20-0x000000000317df28 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:07.622 in thread 15480
+Note: 0x000000000317df20 refers to 4176 byte(s) beyond the top of the stack 0x000000000317ef70
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #103: UNINITIALIZED READ: reading 0x000000000317de0c-0x000000000317de10 4 byte(s) within 0x000000000317ddf8-0x000000000317de10
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Customer::start  
+# 9 PROGRAM          
+#10 worker           
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:07.738 in thread 15480
+
+Error #104: UNINITIALIZED READ: reading 0x000000000317deec-0x000000000317def0 4 byte(s) within 0x000000000317dee8-0x000000000317def8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Customer::start  
+# 9 PROGRAM          
+#10 worker           
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:07.868 in thread 15480
+
+Error #105: UNINITIALIZED READ: reading 0x000000000317ee64-0x000000000317ee68 4 byte(s) within 0x000000000317ee50-0x000000000317ee68
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Customer::start  
+# 9 PROGRAM          
+#10 worker           
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:08.104 in thread 15480
+
+Error #106: UNINITIALIZED READ: reading 0x000000000317ef2c-0x000000000317ef30 4 byte(s) within 0x000000000317ef28-0x000000000317ef38
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Customer::start  
+# 9 PROGRAM          
+#10 worker           
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:08.436 in thread 15480
+
+Error #107: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317dc58-0x000000000317dc60 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:08.655 in thread 15480
+Note: 0x000000000317dc58 refers to 4072 byte(s) beyond the top of the stack 0x000000000317ec40
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #108: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317dbf0-0x000000000317dbf8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:08.791 in thread 15480
+Note: 0x000000000317dbf0 refers to 4176 byte(s) beyond the top of the stack 0x000000000317ec40
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #109: UNINITIALIZED READ: reading 0x000000000317dadc-0x000000000317dae0 4 byte(s) within 0x000000000317dac8-0x000000000317dae0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:08.974 in thread 15480
+
+Error #110: UNINITIALIZED READ: reading 0x000000000317dbbc-0x000000000317dbc0 4 byte(s) within 0x000000000317dbb8-0x000000000317dbc8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:06:09.058 in thread 15480
+
+Error #111: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317dc58-0x000000000317dc60 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.082 in thread 15480
+Note: 0x000000000317dc58 refers to 4072 byte(s) beyond the top of the stack 0x000000000317ec40
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #112: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317dbf0-0x000000000317dbf8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Person::login    
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Customer::start  
+# 8 PROGRAM          
+# 9 worker           
+#10 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.149 in thread 15480
+Note: 0x000000000317dbf0 refers to 4176 byte(s) beyond the top of the stack 0x000000000317ec40
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #113: UNINITIALIZED READ: reading 0x000000000317dadc-0x000000000317dae0 4 byte(s) within 0x000000000317dac8-0x000000000317dae0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.242 in thread 15480
+
+Error #114: UNINITIALIZED READ: reading 0x000000000317dbbc-0x000000000317dbc0 4 byte(s) within 0x000000000317dbb8-0x000000000317dbc8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.290 in thread 15480
+
+Error #115: UNINITIALIZED READ: reading 0x000000000317eb34-0x000000000317eb38 4 byte(s) within 0x000000000317eb20-0x000000000317eb38
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.434 in thread 15480
+
+Error #116: UNINITIALIZED READ: reading 0x000000000317ebfc-0x000000000317ec00 4 byte(s) within 0x000000000317ebf8-0x000000000317ec08
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.472 in thread 15480
+
+Error #117: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317dbe8-0x000000000317dbf0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Customer::home   
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Customer::start  
+# 9 PROGRAM          
+#10 worker           
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.578 in thread 15480
+Note: 0x000000000317dbe8 refers to 4072 byte(s) beyond the top of the stack 0x000000000317ebd0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #118: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317db80-0x000000000317db88 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Customer::home   
+# 3 Person::login    
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Customer::start  
+# 9 PROGRAM          
+#10 worker           
+#11 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.636 in thread 15480
+Note: 0x000000000317db80 refers to 4176 byte(s) beyond the top of the stack 0x000000000317ebd0
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #119: UNINITIALIZED READ: reading 0x000000000317da6c-0x000000000317da70 4 byte(s) within 0x000000000317da58-0x000000000317da70
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::home   
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Customer::start  
+#11 PROGRAM          
+#12 worker           
+#13 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.724 in thread 15480
+
+Error #120: UNINITIALIZED READ: reading 0x000000000317db4c-0x000000000317db50 4 byte(s) within 0x000000000317db48-0x000000000317db58
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::home   
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Customer::start  
+#11 PROGRAM          
+#12 worker           
+#13 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:08:44.778 in thread 15480
+
+Error #121: UNINITIALIZED READ: reading 0x000000000317e6e4-0x000000000317e6e8 4 byte(s) within 0x000000000317e6d0-0x000000000317e6e8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::profile  
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:21:45.033 in thread 15480
+
+Error #122: UNINITIALIZED READ: reading 0x000000000317e7ac-0x000000000317e7b0 4 byte(s) within 0x000000000317e7a8-0x000000000317e7b8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::profile  
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:21:45.535 in thread 15480
+
+Error #123: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317d048-0x000000000317d050 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Customer::complain
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:25:00.451 in thread 15480
+Note: 0x000000000317d048 refers to 4072 byte(s) beyond the top of the stack 0x000000000317e030
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #124: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317cfe0-0x000000000317cfe8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Customer::complain
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:25:00.528 in thread 15480
+Note: 0x000000000317cfe0 refers to 4176 byte(s) beyond the top of the stack 0x000000000317e030
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #125: UNINITIALIZED READ: reading 0x000000000317cecc-0x000000000317ced0 4 byte(s) within 0x000000000317ceb8-0x000000000317ced0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:25:00.609 in thread 15480
+
+Error #126: UNINITIALIZED READ: reading 0x000000000317cfac-0x000000000317cfb0 4 byte(s) within 0x000000000317cfa8-0x000000000317cfb8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:25:00.683 in thread 15480
+
+Error #127: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317d048-0x000000000317d050 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Customer::complain
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:25:51.093 in thread 15480
+Note: 0x000000000317d048 refers to 4072 byte(s) beyond the top of the stack 0x000000000317e030
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #128: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317cfe0-0x000000000317cfe8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Customer::complain
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:25:51.169 in thread 15480
+Note: 0x000000000317cfe0 refers to 4176 byte(s) beyond the top of the stack 0x000000000317e030
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #129: UNINITIALIZED READ: reading 0x000000000317cecc-0x000000000317ced0 4 byte(s) within 0x000000000317ceb8-0x000000000317ced0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:25:51.234 in thread 15480
+
+Error #130: UNINITIALIZED READ: reading 0x000000000317cfac-0x000000000317cfb0 4 byte(s) within 0x000000000317cfa8-0x000000000317cfb8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:25:51.280 in thread 15480
+
+Error #131: UNINITIALIZED READ: reading 0x000000000317df24-0x000000000317df28 4 byte(s) within 0x000000000317df10-0x000000000317df28
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:26:09.650 in thread 15480
+
+Error #132: UNINITIALIZED READ: reading 0x000000000317dfec-0x000000000317dff0 4 byte(s) within 0x000000000317dfe8-0x000000000317dff8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:26:09.697 in thread 15480
+
+Error #133: UNINITIALIZED READ: reading 0x000000000317df24-0x000000000317df28 4 byte(s) within 0x000000000317df10-0x000000000317df28
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:26:48.922 in thread 15480
+
+Error #134: UNINITIALIZED READ: reading 0x000000000317dfec-0x000000000317dff0 4 byte(s) within 0x000000000317dfe8-0x000000000317dff8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:26:48.987 in thread 15480
+
+Error #135: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317d048-0x000000000317d050 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Customer::complain
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:28:25.752 in thread 15480
+Note: 0x000000000317d048 refers to 4072 byte(s) beyond the top of the stack 0x000000000317e030
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #136: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317cfe0-0x000000000317cfe8 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Customer::complain
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Person::login    
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Customer::start  
+#10 PROGRAM          
+#11 worker           
+#12 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:28:25.837 in thread 15480
+Note: 0x000000000317cfe0 refers to 4176 byte(s) beyond the top of the stack 0x000000000317e030
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #137: UNINITIALIZED READ: reading 0x000000000317cecc-0x000000000317ced0 4 byte(s) within 0x000000000317ceb8-0x000000000317ced0
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:28:25.911 in thread 15480
+
+Error #138: UNINITIALIZED READ: reading 0x000000000317cfac-0x000000000317cfb0 4 byte(s) within 0x000000000317cfa8-0x000000000317cfb8
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:28:25.958 in thread 15480
+
+Error #139: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000317b000-0x000000000317b001 1 byte(s)
+# 0 msvcrt.dll!setjmpex                        +0x1f7    (0x00007ffeb8492f57 <msvcrt.dll+0x72f57>)
+# 1 msvcrt.dll!write                           +0x125    (0x00007ffeb843fbf6 <msvcrt.dll+0x1fbf6>)
+# 2 msvcrt.dll!write                           +0x96     (0x00007ffeb843fb67 <msvcrt.dll+0x1fb67>)
+# 3 std::__basic_file<>::xsputn_2               [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 4 std::basic_filebuf<>::xsputn                [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 5 std::ostream::write                         [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 6 Complaint_Base::write
+# 7 Complaint_C::write                          [../../src/mingw-w64-crt/misc/__p__fmode.c:15]
+# 8 Customer::complain
+# 9 Customer::home   
+#10 Person::login    
+#11 Person::login    
+#12 Person::login    
+#13 Person::login    
+#14 Person::login    
+#15 Customer::start  
+#16 PROGRAM          
+#17 worker           
+#18 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:28:50.303 in thread 15480
+Note: 0x000000000317b000 refers to 10680 byte(s) beyond the top of the stack 0x000000000317d9b8
+Note: instruction: test   (%r11) %r11l
+
+Error #140: UNINITIALIZED READ: reading 0x000000000317df24-0x000000000317df28 4 byte(s) within 0x000000000317df10-0x000000000317df28
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:28:50.504 in thread 15480
+
+Error #141: UNINITIALIZED READ: reading 0x000000000317dfec-0x000000000317dff0 4 byte(s) within 0x000000000317dfe8-0x000000000317dff8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:28:50.558 in thread 15480
+
+Error #142: UNINITIALIZED READ: reading 0x000000000317df24-0x000000000317df28 4 byte(s) within 0x000000000317df10-0x000000000317df28
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:31:00.344 in thread 15480
+
+Error #143: UNINITIALIZED READ: reading 0x000000000317dfec-0x000000000317dff0 4 byte(s) within 0x000000000317dfe8-0x000000000317dff8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Customer::complain
+# 5 Customer::home   
+# 6 Person::login    
+# 7 Person::login    
+# 8 Person::login    
+# 9 Person::login    
+#10 Person::login    
+#11 Customer::start  
+#12 PROGRAM          
+#13 worker           
+#14 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:31:00.380 in thread 15480
+
+Error #144: UNINITIALIZED READ: reading 0x000000000337f7f4-0x000000000337f7f8 4 byte(s) within 0x000000000337f7e0-0x000000000337f7f8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO
+# 1 MSWSOCK.dll!?                                                +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                              +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:45:09.542 in thread 18140
+
+Error #145: UNINITIALIZED READ: reading 0x000000000337f8bc-0x000000000337f8c0 4 byte(s) within 0x000000000337f8b8-0x000000000337f8c8
+# 0 system call NtDeviceIoControlFile AFD_SEND_INFO.BufferArray
+# 1 MSWSOCK.dll!?                                                            +0x0      (0x00007ffeb6059f1f <MSWSOCK.dll+0x9f1f>)
+# 2 WS2_32.dll!send                                                          +0x16a    (0x00007ffeb918248b <WS2_32.dll+0x248b>)
+# 3 Thread::Send     
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:45:09.595 in thread 18140
+
+Error #146: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000337e8a8-0x000000000337e8b0 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:126]
+# 1 Thread::Rec      
+# 2 Customer::home   
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:45:09.635 in thread 18140
+Note: 0x000000000337e8a8 refers to 4072 byte(s) beyond the top of the stack 0x000000000337f890
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #147: UNADDRESSABLE ACCESS beyond top of stack: reading 0x000000000337e840-0x000000000337e848 8 byte(s)
+# 0 ___chkstk_ms                      [../../../src/libgcc/config/i386/cygwin.S:132]
+# 1 Thread::Rec      
+# 2 Customer::home   
+# 3 Person::login    
+# 4 Customer::start  
+# 5 PROGRAM          
+# 6 worker           
+# 7 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:45:09.686 in thread 18140
+Note: 0x000000000337e840 refers to 4176 byte(s) beyond the top of the stack 0x000000000337f890
+Note: instruction: or     $0x0000000000000000 (%rcx) -> (%rcx)
+
+Error #148: UNINITIALIZED READ: reading 0x000000000337e72c-0x000000000337e730 4 byte(s) within 0x000000000337e718-0x000000000337e730
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO
+# 1 MSWSOCK.dll!NSPStartup                                       +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                              +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::home   
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:45:09.774 in thread 18140
+
+Error #149: UNINITIALIZED READ: reading 0x000000000337e80c-0x000000000337e810 4 byte(s) within 0x000000000337e808-0x000000000337e818
+# 0 system call NtDeviceIoControlFile AFD_RECV_INFO.BufferArray
+# 1 MSWSOCK.dll!NSPStartup                                                   +0x55d    (0x00007ffeb605d15e <MSWSOCK.dll+0xd15e>)
+# 2 WS2_32.dll!recv                                                          +0xc0     (0x00007ffeb9191e51 <WS2_32.dll+0x11e51>)
+# 3 Thread::Rec      
+# 4 Customer::home   
+# 5 Person::login    
+# 6 Customer::start  
+# 7 PROGRAM          
+# 8 worker           
+# 9 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:45:09.809 in thread 18140
+
+Error #150: UNINITIALIZED READ: reading 0x000000000337f160-0x000000000337f164 4 byte(s)
+# 0 msvcrt.dll!getch                 +0xcf     (0x00007ffeb843bb7f <msvcrt.dll+0x1bb7f>)
+# 1 msvcrt.dll!getch                 +0x15     (0x00007ffeb843bac6 <msvcrt.dll+0x1bac6>)
+# 2 Person::buy      
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:45:29.353 in thread 18140
+Note: instruction: cmp    0xffffffd0(%rbp) $0x00000000
+
+Error #151: UNINITIALIZED READ: reading 0x000000000337f16c-0x000000000337f170 4 byte(s)
+# 0 msvcrt.dll!getch                 +0xdc     (0x00007ffeb843bb8c <msvcrt.dll+0x1bb8c>)
+# 1 msvcrt.dll!getch                 +0x15     (0x00007ffeb843bac6 <msvcrt.dll+0x1bac6>)
+# 2 Person::buy      
+# 3 Customer::home   
+# 4 Person::login    
+# 5 Customer::start  
+# 6 PROGRAM          
+# 7 worker           
+# 8 KERNEL32.dll!BaseThreadInitThunk
+Note: @1:45:29.402 in thread 18140
+Note: instruction: cmp    0xffffffdc(%rbp) $0x00000000

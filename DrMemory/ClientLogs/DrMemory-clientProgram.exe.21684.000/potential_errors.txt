@@ -1,0 +1,375 @@
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:38:58
+Dr. Memory errors that are likely to be false positives, for pid 21684: "clientProgram.exe"
+These errors matched the blocklist ',C:\WINDOWS*.d??' for 4 frames.
+Run with -lib_blocklist_frames 0 to treat these as regular errors.
+If these are all false positives and your focus is unaddressable errors, consider running with -light to skip all uninitialized reads and leaks for higher performance.
+
+Potential Error #1: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1d62   (0x00007ffeb918d843 <WS2_32.dll+0xd843>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0xeac    (0x00007ffeb918c98d <WS2_32.dll+0xc98d>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x2377   (0x00007ffeb918de58 <WS2_32.dll+0xde58>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 6 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 7 Client::start    
+# 8 main             
+Note: @0:00:02.496 in thread 19112
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #2: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!RegQueryValueExA
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x1d62   (0x00007ffeb918d843 <WS2_32.dll+0xd843>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0xeac    (0x00007ffeb918c98d <WS2_32.dll+0xc98d>)
+# 3 WS2_32.dll!WSALookupServiceNextW   +0x2377   (0x00007ffeb918de58 <WS2_32.dll+0xde58>)
+# 4 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 5 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 6 Client::start    
+# 7 main             
+Note: @0:00:02.516 in thread 19112
+Note: instruction: cmp    %eax $0x00000001
+
+Potential Error #3: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1d62   (0x00007ffeb918d843 <WS2_32.dll+0xd843>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0xeac    (0x00007ffeb918c98d <WS2_32.dll+0xc98d>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x2377   (0x00007ffeb918de58 <WS2_32.dll+0xde58>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 6 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 7 Client::start    
+# 8 main             
+Note: @0:00:02.524 in thread 19112
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #4: UNINITIALIZED READ: reading 0x00000000007ef610-0x00000000007ef614 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1d62   (0x00007ffeb918d843 <WS2_32.dll+0xd843>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0xeac    (0x00007ffeb918c98d <WS2_32.dll+0xc98d>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x2377   (0x00007ffeb918de58 <WS2_32.dll+0xde58>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 6 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 7 Client::start    
+# 8 main             
+Note: @0:00:02.530 in thread 19112
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #5: UNINITIALIZED READ: reading register r12d
+# 0 KERNELBASE.dll!RegQueryValueExA
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x1d62   (0x00007ffeb918d843 <WS2_32.dll+0xd843>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0xeac    (0x00007ffeb918c98d <WS2_32.dll+0xc98d>)
+# 3 WS2_32.dll!WSALookupServiceNextW   +0x2377   (0x00007ffeb918de58 <WS2_32.dll+0xde58>)
+# 4 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 5 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 6 Client::start    
+# 7 main             
+Note: @0:00:02.538 in thread 19112
+Note: instruction: cmp    0xd0(%rsp) %r12d
+
+Potential Error #6: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x2473   (0x00007ffeb918df54 <WS2_32.dll+0xdf54>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 4 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 5 Client::start    
+# 6 main             
+Note: @0:00:02.809 in thread 19112
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #7: UNINITIALIZED READ: reading 0x00000000007ef930-0x00000000007ef934 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x2473   (0x00007ffeb918df54 <WS2_32.dll+0xdf54>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 4 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 5 Client::start    
+# 6 main             
+Note: @0:00:02.818 in thread 19112
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #8: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x17b7   (0x00007ffeb918d298 <WS2_32.dll+0xd298>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x16d3   (0x00007ffeb918d1b4 <WS2_32.dll+0xd1b4>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x1529   (0x00007ffeb918d00a <WS2_32.dll+0xd00a>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x230b   (0x00007ffeb918ddec <WS2_32.dll+0xddec>)
+# 6 WS2_32.dll!WSALookupServiceNextW       +0x25bd   (0x00007ffeb918e09e <WS2_32.dll+0xe09e>)
+# 7 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 8 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 9 Client::start    
+#10 main             
+Note: @0:00:02.994 in thread 19112
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #9: UNINITIALIZED READ: reading 0x00000000007ef4e0-0x00000000007ef4e4 4 byte(s) within 0x00000000007ef4e0-0x00000000007ef4e4
+# 0 system call NtQueryValueKey parameter value #4
+# 1 KERNELBASE.dll!Wow64NtQueryValueKey
+# 2 KERNELBASE.dll!BaseRegQueryValueInternal
+# 3 KERNELBASE.dll!RegQueryValueExA
+# 4 WS2_32.dll!WSALookupServiceNextW                            +0x17b7   (0x00007ffeb918d298 <WS2_32.dll+0xd298>)
+# 5 WS2_32.dll!WSALookupServiceNextW                            +0x16d3   (0x00007ffeb918d1b4 <WS2_32.dll+0xd1b4>)
+# 6 WS2_32.dll!WSALookupServiceNextW                            +0x1529   (0x00007ffeb918d00a <WS2_32.dll+0xd00a>)
+# 7 WS2_32.dll!WSALookupServiceNextW                            +0x230b   (0x00007ffeb918ddec <WS2_32.dll+0xddec>)
+# 8 WS2_32.dll!WSALookupServiceNextW                            +0x25bd   (0x00007ffeb918e09e <WS2_32.dll+0xe09e>)
+# 9 WS2_32.dll!WSALookupServiceNextW                            +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+#10 WS2_32.dll!WSAStartup                                       +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+#11 Client::start    
+#12 main             
+Note: @0:00:03.018 in thread 19112
+
+Potential Error #10: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!RegQueryValueExA
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x1a8e   (0x00007ffeb918d56f <WS2_32.dll+0xd56f>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0x1323   (0x00007ffeb918ce04 <WS2_32.dll+0xce04>)
+# 3 WS2_32.dll!WSALookupServiceNextW   +0x11d7   (0x00007ffeb918ccb8 <WS2_32.dll+0xccb8>)
+# 4 WS2_32.dll!WSALookupServiceNextW   +0x22cb   (0x00007ffeb918ddac <WS2_32.dll+0xddac>)
+# 5 WS2_32.dll!WSALookupServiceNextW   +0x262f   (0x00007ffeb918e110 <WS2_32.dll+0xe110>)
+# 6 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 7 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 8 Client::start    
+# 9 main             
+Note: @0:00:03.345 in thread 19112
+Note: instruction: cmp    %eax $0x00000001
+
+Potential Error #11: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1a8e   (0x00007ffeb918d56f <WS2_32.dll+0xd56f>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x1323   (0x00007ffeb918ce04 <WS2_32.dll+0xce04>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x11d7   (0x00007ffeb918ccb8 <WS2_32.dll+0xccb8>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x22cb   (0x00007ffeb918ddac <WS2_32.dll+0xddac>)
+# 6 WS2_32.dll!WSALookupServiceNextW       +0x262f   (0x00007ffeb918e110 <WS2_32.dll+0xe110>)
+# 7 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 8 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 9 Client::start    
+#10 main             
+Note: @0:00:03.364 in thread 19112
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #12: UNINITIALIZED READ: reading 0x00000000007ef650-0x00000000007ef654 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExA
+# 2 WS2_32.dll!WSALookupServiceNextW       +0x1a8e   (0x00007ffeb918d56f <WS2_32.dll+0xd56f>)
+# 3 WS2_32.dll!WSALookupServiceNextW       +0x1323   (0x00007ffeb918ce04 <WS2_32.dll+0xce04>)
+# 4 WS2_32.dll!WSALookupServiceNextW       +0x11d7   (0x00007ffeb918ccb8 <WS2_32.dll+0xccb8>)
+# 5 WS2_32.dll!WSALookupServiceNextW       +0x22cb   (0x00007ffeb918ddac <WS2_32.dll+0xddac>)
+# 6 WS2_32.dll!WSALookupServiceNextW       +0x262f   (0x00007ffeb918e110 <WS2_32.dll+0xe110>)
+# 7 WS2_32.dll!WSALookupServiceNextW       +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 8 WS2_32.dll!WSAStartup                  +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 9 Client::start    
+#10 main             
+Note: @0:00:03.381 in thread 19112
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #13: UNINITIALIZED READ: reading register r12d
+# 0 KERNELBASE.dll!RegQueryValueExA
+# 1 WS2_32.dll!WSALookupServiceNextW   +0x1a8e   (0x00007ffeb918d56f <WS2_32.dll+0xd56f>)
+# 2 WS2_32.dll!WSALookupServiceNextW   +0x1323   (0x00007ffeb918ce04 <WS2_32.dll+0xce04>)
+# 3 WS2_32.dll!WSALookupServiceNextW   +0x11d7   (0x00007ffeb918ccb8 <WS2_32.dll+0xccb8>)
+# 4 WS2_32.dll!WSALookupServiceNextW   +0x22cb   (0x00007ffeb918ddac <WS2_32.dll+0xddac>)
+# 5 WS2_32.dll!WSALookupServiceNextW   +0x262f   (0x00007ffeb918e110 <WS2_32.dll+0xe110>)
+# 6 WS2_32.dll!WSALookupServiceNextW   +0x2ffd   (0x00007ffeb918eade <WS2_32.dll+0xeade>)
+# 7 WS2_32.dll!WSAStartup              +0x33c    (0x00007ffeb918ee4d <WS2_32.dll+0xee4d>)
+# 8 Client::start    
+# 9 main             
+Note: @0:00:03.395 in thread 19112
+Note: instruction: cmp    0xd0(%rsp) %r12d
+
+Potential Error #14: UNINITIALIZED READ: reading register r11
+# 0 WS2_32.dll!WahReferenceContextByHandle   +0x25     (0x00007ffeb9190ac5 <WS2_32.dll+0x10ac5>)
+# 1 MSWSOCK.dll!?                            +0x0      (0x00007ffeb6056b86 <MSWSOCK.dll+0x6b86>)
+# 2 MSWSOCK.dll!?                            +0x0      (0x00007ffeb6054146 <MSWSOCK.dll+0x4146>)
+# 3 WS2_32.dll!WSCWriteNameSpaceOrder32      +0x5cf    (0x00007ffeb91bdf90 <WS2_32.dll+0x3df90>)
+# 4 WS2_32.dll!WSAUnhookBlockingHook         +0x725    (0x00007ffeb91a4b56 <WS2_32.dll+0x24b56>)
+# 5 WS2_32.dll!getnameinfo                   +0x4b35   (0x00007ffeb9198bf6 <WS2_32.dll+0x18bf6>)
+# 6 Client::Connect  
+# 7 Client::start    
+# 8 main             
+Note: @0:00:04.628 in thread 19112
+Note: instruction: lock xadd   0x10(%r11) %r8d -> 0x10(%r11) %r8d
+
+Potential Error #15: UNINITIALIZED READ: reading register r11
+# 0 WS2_32.dll!WahReferenceContextByHandle   +0x25     (0x00007ffeb9190ac5 <WS2_32.dll+0x10ac5>)
+# 1 MSWSOCK.dll!Tcpip6_WSHStringToAddress    +0x108    (0x00007ffeb6060ca9 <MSWSOCK.dll+0x10ca9>)
+# 2 MSWSOCK.dll!?                            +0x0      (0x00007ffeb6054146 <MSWSOCK.dll+0x4146>)
+# 3 WS2_32.dll!WSCWriteNameSpaceOrder32      +0x5cf    (0x00007ffeb91bdf90 <WS2_32.dll+0x3df90>)
+# 4 WS2_32.dll!WSAUnhookBlockingHook         +0x725    (0x00007ffeb91a4b56 <WS2_32.dll+0x24b56>)
+# 5 WS2_32.dll!getnameinfo                   +0x4b35   (0x00007ffeb9198bf6 <WS2_32.dll+0x18bf6>)
+# 6 Client::Connect  
+# 7 Client::start    
+# 8 main             
+Note: @0:00:04.640 in thread 19112
+Note: instruction: lock xadd   0x10(%r11) %r8d -> 0x10(%r11) %r8d
+
+Potential Error #16: UNINITIALIZED READ: reading register r10
+# 0 system call NtDeviceIoControlFile parameter value #0
+# 1 MSWSOCK.dll!Tcpip6_WSHStringToAddress                             +0x197    (0x00007ffeb6060d38 <MSWSOCK.dll+0x10d38>)
+# 2 MSWSOCK.dll!?                                                     +0x0      (0x00007ffeb6054146 <MSWSOCK.dll+0x4146>)
+# 3 WS2_32.dll!WSCWriteNameSpaceOrder32                               +0x5cf    (0x00007ffeb91bdf90 <WS2_32.dll+0x3df90>)
+# 4 WS2_32.dll!WSAUnhookBlockingHook                                  +0x725    (0x00007ffeb91a4b56 <WS2_32.dll+0x24b56>)
+# 5 WS2_32.dll!getnameinfo                                            +0x4b35   (0x00007ffeb9198bf6 <WS2_32.dll+0x18bf6>)
+# 6 Client::Connect  
+# 7 Client::start    
+# 8 main             
+Note: @0:00:04.652 in thread 19112
+
+Potential Error #17: UNINITIALIZED READ: reading 0x00000000007ef560-0x00000000007ef564 4 byte(s)
+# 0 MSWSOCK.dll!WSPStartup       +0x72b    (0x00007ffeb605aaeb <MSWSOCK.dll+0xaaeb>)
+# 1 MSWSOCK.dll!?                +0x0      (0x00007ffeb6057b9d <MSWSOCK.dll+0x7b9d>)
+# 2 MSWSOCK.dll!?                +0x0      (0x00007ffeb6057205 <MSWSOCK.dll+0x7205>)
+# 3 MSWSOCK.dll!?                +0x0      (0x00007ffeb6056fda <MSWSOCK.dll+0x6fda>)
+# 4 WS2_32.dll!WSASocketW        +0x12f    (0x00007ffeb91857e0 <WS2_32.dll+0x57e0>)
+# 5 WS2_32.dll!socket            +0x6d     (0x00007ffeb918565e <WS2_32.dll+0x565e>)
+# 6 Client::Connect  
+# 7 Client::start    
+# 8 main             
+Note: @0:00:04.740 in thread 19112
+Note: instruction: cmp    0x30(%rbp) $0x00000007
+
+Potential Error #18: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 MSWSOCK.dll!WSPStartup                 +0x77d    (0x00007ffeb605ab3e <MSWSOCK.dll+0xab3e>)
+# 3 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6057b9d <MSWSOCK.dll+0x7b9d>)
+# 4 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6057205 <MSWSOCK.dll+0x7205>)
+# 5 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6056fda <MSWSOCK.dll+0x6fda>)
+# 6 WS2_32.dll!WSASocketW                  +0x12f    (0x00007ffeb91857e0 <WS2_32.dll+0x57e0>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffeb918565e <WS2_32.dll+0x565e>)
+# 8 Client::Connect  
+# 9 Client::start    
+#10 main             
+Note: @0:00:04.750 in thread 19112
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #19: UNINITIALIZED READ: reading 0x00000000007ef510-0x00000000007ef514 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 MSWSOCK.dll!WSPStartup                 +0x77d    (0x00007ffeb605ab3e <MSWSOCK.dll+0xab3e>)
+# 3 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6057b9d <MSWSOCK.dll+0x7b9d>)
+# 4 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6057205 <MSWSOCK.dll+0x7205>)
+# 5 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6056fda <MSWSOCK.dll+0x6fda>)
+# 6 WS2_32.dll!WSASocketW                  +0x12f    (0x00007ffeb91857e0 <WS2_32.dll+0x57e0>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffeb918565e <WS2_32.dll+0x565e>)
+# 8 Client::Connect  
+# 9 Client::start    
+#10 main             
+Note: @0:00:04.759 in thread 19112
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #20: UNINITIALIZED READ: reading 0x00000000007ef568-0x00000000007ef56c 4 byte(s)
+# 0 MSWSOCK.dll!?                +0x0      (0x00007ffeb6059042 <MSWSOCK.dll+0x9042>)
+# 1 MSWSOCK.dll!?                +0x0      (0x00007ffeb6057bec <MSWSOCK.dll+0x7bec>)
+# 2 MSWSOCK.dll!?                +0x0      (0x00007ffeb6057205 <MSWSOCK.dll+0x7205>)
+# 3 MSWSOCK.dll!?                +0x0      (0x00007ffeb6056fda <MSWSOCK.dll+0x6fda>)
+# 4 WS2_32.dll!WSASocketW        +0x12f    (0x00007ffeb91857e0 <WS2_32.dll+0x57e0>)
+# 5 WS2_32.dll!socket            +0x6d     (0x00007ffeb918565e <WS2_32.dll+0x565e>)
+# 6 Client::Connect  
+# 7 Client::start    
+# 8 main             
+Note: @0:00:04.782 in thread 19112
+Note: instruction: cmp    0x78(%rsp) $0x00000003
+
+Potential Error #21: UNINITIALIZED READ: reading register eax
+# 0 MSWSOCK.dll!?                +0x0      (0x00007ffeb6059051 <MSWSOCK.dll+0x9051>)
+# 1 MSWSOCK.dll!?                +0x0      (0x00007ffeb6057bec <MSWSOCK.dll+0x7bec>)
+# 2 MSWSOCK.dll!?                +0x0      (0x00007ffeb6057205 <MSWSOCK.dll+0x7205>)
+# 3 MSWSOCK.dll!?                +0x0      (0x00007ffeb6056fda <MSWSOCK.dll+0x6fda>)
+# 4 WS2_32.dll!WSASocketW        +0x12f    (0x00007ffeb91857e0 <WS2_32.dll+0x57e0>)
+# 5 WS2_32.dll!socket            +0x6d     (0x00007ffeb918565e <WS2_32.dll+0x565e>)
+# 6 Client::Connect  
+# 7 Client::start    
+# 8 main             
+Note: @0:00:04.792 in thread 19112
+Note: instruction: cmp    %eax $0x00000014
+
+Potential Error #22: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 MSWSOCK.dll!?                          +0x0      (0x00007ffeb60590a9 <MSWSOCK.dll+0x90a9>)
+# 3 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6057bec <MSWSOCK.dll+0x7bec>)
+# 4 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6057205 <MSWSOCK.dll+0x7205>)
+# 5 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6056fda <MSWSOCK.dll+0x6fda>)
+# 6 WS2_32.dll!WSASocketW                  +0x12f    (0x00007ffeb91857e0 <WS2_32.dll+0x57e0>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffeb918565e <WS2_32.dll+0x565e>)
+# 8 Client::Connect  
+# 9 Client::start    
+#10 main             
+Note: @0:00:04.802 in thread 19112
+Note: instruction: cmp    %eax $0x0000000c
+
+Potential Error #23: UNINITIALIZED READ: reading 0x00000000007ef500-0x00000000007ef504 4 byte(s)
+# 0 KERNELBASE.dll!BaseRegQueryValueInternal
+# 1 KERNELBASE.dll!RegQueryValueExW
+# 2 MSWSOCK.dll!?                          +0x0      (0x00007ffeb60590a9 <MSWSOCK.dll+0x90a9>)
+# 3 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6057bec <MSWSOCK.dll+0x7bec>)
+# 4 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6057205 <MSWSOCK.dll+0x7205>)
+# 5 MSWSOCK.dll!?                          +0x0      (0x00007ffeb6056fda <MSWSOCK.dll+0x6fda>)
+# 6 WS2_32.dll!WSASocketW                  +0x12f    (0x00007ffeb91857e0 <WS2_32.dll+0x57e0>)
+# 7 WS2_32.dll!socket                      +0x6d     (0x00007ffeb918565e <WS2_32.dll+0x565e>)
+# 8 Client::Connect  
+# 9 Client::start    
+#10 main             
+Note: @0:00:04.811 in thread 19112
+Note: instruction: cmp    (%r14) %eax
+
+Potential Error #24: UNINITIALIZED READ: reading 0x00000000007ef7ac-0x00000000007ef7b0 4 byte(s) within 0x00000000007ef730-0x00000000007ef7b4
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60589e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb6056ffc <MSWSOCK.dll+0x6ffc>)
+# 3 WS2_32.dll!WSASocketW                                                     +0x12f    (0x00007ffeb91857e0 <WS2_32.dll+0x57e0>)
+# 4 WS2_32.dll!socket                                                         +0x6d     (0x00007ffeb918565e <WS2_32.dll+0x565e>)
+# 5 Client::Connect  
+# 6 Client::start    
+# 7 main             
+Note: @0:00:04.941 in thread 19112
+
+Potential Error #25: UNINITIALIZED READ: reading 0x00000000007ef6ac-0x00000000007ef6b0 4 byte(s) within 0x00000000007ef630-0x00000000007ef6b4
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60589e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60582f3 <MSWSOCK.dll+0x82f3>)
+# 3 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb6053b58 <MSWSOCK.dll+0x3b58>)
+# 4 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60538b0 <MSWSOCK.dll+0x38b0>)
+# 5 WS2_32.dll!connect                                                        +0x9a     (0x00007ffeb9191aeb <WS2_32.dll+0x11aeb>)
+# 6 Client::Connect  
+# 7 Client::start    
+# 8 main             
+Note: @0:00:05.008 in thread 19112
+
+Potential Error #26: UNINITIALIZED READ: reading 0x00000000007ef65c-0x00000000007ef660 4 byte(s) within 0x00000000007ef5e0-0x00000000007ef664
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60589e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60558f7 <MSWSOCK.dll+0x58f7>)
+# 3 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb6053b76 <MSWSOCK.dll+0x3b76>)
+# 4 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60538b0 <MSWSOCK.dll+0x38b0>)
+# 5 WS2_32.dll!connect                                                        +0x9a     (0x00007ffeb9191aeb <WS2_32.dll+0x11aeb>)
+# 6 Client::Connect  
+# 7 Client::start    
+# 8 main             
+Note: @0:00:05.038 in thread 19112
+
+Potential Error #27: UNINITIALIZED READ: reading 0x00000000007ef7d4-0x00000000007ef7d8 4 byte(s) within 0x00000000007ef7d4-0x00000000007ef7dc
+# 0 system call NtDeviceIoControlFile AFD_CONNECT_INFO pre-RemoteAddress
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60535c0 <MSWSOCK.dll+0x35c0>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb6053cb0 <MSWSOCK.dll+0x3cb0>)
+# 3 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60538b0 <MSWSOCK.dll+0x38b0>)
+# 4 WS2_32.dll!connect                                                        +0x9a     (0x00007ffeb9191aeb <WS2_32.dll+0x11aeb>)
+# 5 Client::Connect  
+# 6 Client::start    
+# 7 main             
+Note: @0:00:05.059 in thread 19112
+
+Potential Error #28: UNINITIALIZED READ: reading 0x00000000007ef61c-0x00000000007ef620 4 byte(s) within 0x00000000007ef5a0-0x00000000007ef624
+# 0 system call NtDeviceIoControlFile SOCKET_CONTEXT pre-Padding
+# 1 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60589e3 <MSWSOCK.dll+0x89e3>)
+# 2 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60551fb <MSWSOCK.dll+0x51fb>)
+# 3 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb6053652 <MSWSOCK.dll+0x3652>)
+# 4 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb6053cb0 <MSWSOCK.dll+0x3cb0>)
+# 5 MSWSOCK.dll!?                                                             +0x0      (0x00007ffeb60538b0 <MSWSOCK.dll+0x38b0>)
+# 6 WS2_32.dll!connect                                                        +0x9a     (0x00007ffeb9191aeb <WS2_32.dll+0x11aeb>)
+# 7 Client::Connect  
+# 8 Client::start    
+# 9 main             
+Note: @0:00:05.077 in thread 19112
