@@ -1,0 +1,773 @@
+# callgrind format
+event: t : Microseconds Spent Total
+event: ps : Microseconds Spent Per Second
+events: t ps
+cmd: C:\Users\Dida\Desktop\2024_Analysis_online-shopping-system\online-shopping-system\Client\clientProgram.exe
+desc: Fri Sep 05 14:03:19 2025
+
+ob=(1) clientProgram
+fl=(1) [unknown]
+fn=(1) __tmainCRTStartup
+cob=(1)
+cfl=(1)
+cfn=(2) main
+calls=232 0
+0 325177120 996617
+
+ob=(1)
+fl=(1)
+fn=(3) mainCRTStartup
+cob=(1)
+cfl=(1)
+cfn=(1)
+calls=232 0
+0 325177120 996617
+
+ob=(1)
+fl=(1)
+fn=(4) Client::Send
+cob=(1)
+cfl=(1)
+cfn=(4)
+calls=2 0
+0 7951 24
+cob=(2) WS2_32
+cfl=(1)
+cfn=(5) send
+calls=2 0
+0 7951 24
+
+ob=(1)
+fl=(1)
+fn=(6) Client::Rec
+cob=(2)
+cfl=(1)
+cfn=(7) recv
+calls=1 0
+0 139648 428
+
+ob=(1)
+fl=(1)
+fn=(8) welcome
+cob=(1)
+cfl=(1)
+cfn=(9) std::operator<< <std::char_traits<char> >
+calls=4 0
+0 57318 176
+
+ob=(1)
+fl=(1)
+fn=(10) heading
+cob=(1)
+cfl=(1)
+cfn=(11) std::endl<char, std::char_traits<char> >
+calls=7 0
+0 32894 101
+cob=(1)
+cfl=(1)
+cfn=(12) std::__ostream_insert<char, std::char_traits<char> >
+calls=8 0
+0 36910 113
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=20 0
+0 736205 2256
+
+ob=(1)
+fl=(1)
+fn=(13) Person::login
+cob=(1)
+cfl=(1)
+cfn=(10)
+calls=4 0
+0 48907 150
+cob=(1)
+cfl=(1)
+cfn=(14) Customer::home
+calls=44 0
+0 52888543 162095
+cob=(1)
+cfl=(1)
+cfn=(15) Employee::home
+calls=54 0
+0 92076779 282201
+cob=(1)
+cfl=(1)
+cfn=(16) Admin::home
+calls=106 0
+0 134999118 413751
+cob=(1)
+cfl=(1)
+cfn=(17) std::getline<char, std::char_traits<char>, std::allocator<char> >
+calls=3 0
+0 9070360 27799
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=3 0
+0 11457 35
+cob=(3) msvcrt
+cfl=(1)
+cfn=(18) getch
+calls=3 0
+0 6244868 19140
+cob=(3)
+cfl=(1)
+cfn=(19) system
+calls=3 0
+0 91660 281
+
+ob=(1)
+fl=(1)
+fn=(20) Person::profile
+cob=(1)
+cfl=(1)
+cfn=(10)
+calls=7 0
+0 90297 277
+cob=(1)
+cfl=(1)
+cfn=(12)
+calls=3 0
+0 11943 37
+cob=(3)
+cfl=(1)
+cfn=(18)
+calls=4 0
+0 4003284 12269
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=4 0
+0 154491 473
+
+ob=(1)
+fl=(1)
+fn=(21) Person::buy
+cob=(1)
+cfl=(1)
+cfn=(4)
+calls=2 0
+0 7951 24
+cob=(1)
+cfl=(1)
+cfn=(10)
+calls=8 0
+0 245200 751
+cob=(1)
+cfl=(1)
+cfn=(11)
+calls=6 0
+0 31781 97
+cob=(1)
+cfl=(1)
+cfn=(22) std::istream::operator>>
+calls=12 0
+0 29030678 88974
+cob=(1)
+cfl=(1)
+cfn=(12)
+calls=5 0
+0 25963 80
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=11 0
+0 61710 189
+cob=(3)
+cfl=(1)
+cfn=(18)
+calls=6 0
+0 7791055 23878
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=3 0
+0 399570 1225
+
+ob=(1)
+fl=(1)
+fn=(23) Customer::start
+cob=(1)
+cfl=(1)
+cfn=(8)
+calls=2 0
+0 23834 73
+cob=(1)
+cfl=(1)
+cfn=(13)
+calls=50 0
+0 58332524 178780
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=1 0
+0 4409480 13514
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=2 0
+0 8013 25
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=1 0
+0 64881 199
+
+ob=(1)
+fl=(1)
+fn=(14)
+cob=(1)
+cfl=(1)
+cfn=(10)
+calls=2 0
+0 69699 214
+cob=(1)
+cfl=(1)
+cfn=(20)
+calls=4 0
+0 783181 2400
+cob=(1)
+cfl=(1)
+cfn=(21)
+calls=17 0
+0 11713659 35901
+cob=(1)
+cfl=(1)
+cfn=(24) Customer::complain
+calls=12 0
+0 25714724 78812
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=1 0
+0 11164600 34218
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=5 0
+0 24857 76
+cob=(3)
+cfl=(1)
+cfn=(18)
+calls=2 0
+0 3289670 10082
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=1 0
+0 128153 393
+
+ob=(1)
+fl=(1)
+fn=(24)
+cob=(1)
+cfl=(1)
+cfn=(25) std::istream::get
+calls=3 0
+0 2816452 8632
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=1 0
+0 6935100 21255
+cob=(1)
+cfl=(1)
+cfn=(17)
+calls=2 0
+0 15796540 48414
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=5 0
+0 24849 76
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=1 0
+0 141783 435
+
+ob=(1)
+fl=(1)
+fn=(15)
+cob=(1)
+cfl=(1)
+cfn=(10)
+calls=3 0
+0 77838 239
+cob=(1)
+cfl=(1)
+cfn=(20)
+calls=6 0
+0 1736867 5323
+cob=(1)
+cfl=(1)
+cfn=(21)
+calls=17 0
+0 13981153 42850
+cob=(1)
+cfl=(1)
+cfn=(26) Employee::complain
+calls=22 0
+0 51903784 159077
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=2 0
+0 24194740 74153
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=3 0
+0 20858 64
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=1 0
+0 161539 495
+
+ob=(1)
+fl=(1)
+fn=(26)
+cob=(1)
+cfl=(1)
+cfn=(25)
+calls=11 0
+0 13100873 40152
+cob=(1)
+cfl=(1)
+cfn=(11)
+calls=1 0
+0 4017 12
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=2 0
+0 29304997 89815
+cob=(1)
+cfl=(1)
+cfn=(17)
+calls=8 0
+0 53372190 163577
+cob=(1)
+cfl=(1)
+cfn=(12)
+calls=4 0
+0 15872 49
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=15 0
+0 85736 263
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=2 0
+0 470456 1442
+
+ob=(1)
+fl=(1)
+fn=(16)
+cob=(1)
+cfl=(1)
+cfn=(10)
+calls=4 0
+0 151589 465
+cob=(1)
+cfl=(1)
+cfn=(20)
+calls=4 0
+0 830596 2546
+cob=(1)
+cfl=(1)
+cfn=(21)
+calls=19 0
+0 11899095 36469
+cob=(1)
+cfl=(1)
+cfn=(26)
+calls=20 0
+0 44202063 135472
+cob=(1)
+cfl=(1)
+cfn=(27) Admin::search
+calls=28 0
+0 22598869 69262
+cob=(1)
+cfl=(1)
+cfn=(28) Admin::balance
+calls=3 0
+0 6647015 20372
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=3 0
+0 45397819 139137
+cob=(1)
+cfl=(1)
+cfn=(12)
+calls=1 0
+0 7987 24
+cob=(1)
+cfl=(1)
+cfn=(29) Admin::accounts
+calls=4 0
+0 1799840 5516
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=17 0
+0 186485 572
+cob=(3)
+cfl=(1)
+cfn=(18)
+calls=1 0
+0 904564 2772
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=2 0
+0 373196 1144
+
+ob=(1)
+fl=(1)
+fn=(27)
+cob=(1)
+cfl=(1)
+cfn=(10)
+calls=6 0
+0 106516 326
+cob=(1)
+cfl=(1)
+cfn=(20)
+calls=4 0
+0 909370 2787
+cob=(1)
+cfl=(1)
+cfn=(11)
+calls=1 0
+0 8978 28
+cob=(1)
+cfl=(1)
+cfn=(27)
+calls=15 0
+0 6587498 20190
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=2 0
+0 15716510 48169
+cob=(1)
+cfl=(1)
+cfn=(17)
+calls=2 0
+0 3808760 11673
+cob=(1)
+cfl=(1)
+cfn=(12)
+calls=2 0
+0 7973 24
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=6 0
+0 34898 107
+cob=(3)
+cfl=(1)
+cfn=(18)
+calls=1 0
+0 1729850 5302
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=4 0
+0 276014 846
+
+ob=(1)
+fl=(1)
+fn=(28)
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=1 0
+0 2348820 7199
+cob=(1)
+cfl=(1)
+cfn=(17)
+calls=1 0
+0 3507650 10750
+cob=(3)
+cfl=(1)
+cfn=(18)
+calls=1 0
+0 790545 2423
+
+ob=(1)
+fl=(1)
+fn=(29)
+cob=(1)
+cfl=(1)
+cfn=(10)
+calls=1 0
+0 15963 49
+cob=(1)
+cfl=(1)
+cfn=(12)
+calls=1 0
+0 4988 15
+cob=(3)
+cfl=(1)
+cfn=(18)
+calls=1 0
+0 1744990 5348
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=1 0
+0 33898 104
+
+ob=(1)
+fl=(1)
+fn=(2)
+cob=(1)
+cfl=(1)
+cfn=(23)
+calls=56 0
+0 62838732 192591
+cob=(1)
+cfl=(1)
+cfn=(8)
+calls=2 0
+0 33484 103
+cob=(1)
+cfl=(1)
+cfn=(13)
+calls=170 0
+0 237099169 726672
+cob=(1)
+cfl=(1)
+cfn=(22)
+calls=1 0
+0 25193800 77215
+cob=(1)
+cfl=(1)
+cfn=(9)
+calls=3 0
+0 11935 37
+cob=(3)
+cfl=(1)
+cfn=(19)
+calls=1 0
+0 104048 319
+
+ob=(1)
+fl=(1)
+fn=(30) putc
+0 7941 24
+
+ob=(1)
+fl=(1)
+fn=(31) __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::uflow
+cob=(3)
+cfl=(1)
+cfn=(32) fgetc
+calls=14 0
+0 15917325 48784
+
+ob=(1)
+fl=(1)
+fn=(33) __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow
+0 4989 15
+cob=(3)
+cfl=(1)
+cfn=(32)
+calls=41 0
+0 279247054 855848
+
+ob=(1)
+fl=(1)
+fn=(25)
+cob=(1)
+cfl=(1)
+cfn=(31)
+calls=14 0
+0 15917325 48784
+
+ob=(1)
+fl=(1)
+fn=(34) std::istream::sentry::sentry
+cob=(1)
+cfl=(1)
+cfn=(33)
+calls=25 0
+0 191347723 586451
+
+ob=(1)
+fl=(1)
+fn=(22)
+cob=(1)
+cfl=(1)
+cfn=(34)
+calls=25 0
+0 191347723 586451
+cob=(1)
+cfl=(1)
+cfn=(33)
+calls=1 0
+0 2348820 7199
+
+ob=(1)
+fl=(1)
+fn=(35) std::ostream::put
+cob=(3)
+cfl=(1)
+cfn=(30)
+calls=14 0
+0 73685 226
+
+ob=(1)
+fl=(1)
+fn=(12)
+cob=(1)
+cfl=(1)
+cfn=(30)
+calls=2 0
+0 7941 24
+cob=(3)
+cfl=(1)
+cfn=(30)
+calls=21 0
+0 781598 2395
+cob=(3)
+cfl=(1)
+cfn=(36) fwrite
+calls=94 0
+0 582434 1785
+
+ob=(1)
+fl=(1)
+fn=(11)
+cob=(1)
+cfl=(1)
+cfn=(35)
+calls=14 0
+0 73685 226
+cob=(3)
+cfl=(1)
+cfn=(37) fflush
+calls=1 0
+0 3986 12
+
+ob=(1)
+fl=(1)
+fn=(17)
+cob=(1)
+cfl=(1)
+cfn=(33)
+calls=16 0
+0 85555500 262214
+
+ob=(1)
+fl=(1)
+fn=(9)
+cob=(1)
+cfl=(1)
+cfn=(12)
+calls=93 0
+0 1260339 3863
+cob=(3)
+cfl=(1)
+cfn=(38) strlen
+calls=1 0
+0 3982 12
+
+ob=(4) mswsock
+fl=(2) 
+fn=(39) [00007FFD1F4D8C5C]
+cob=(5) ntdll
+cfl=(1)
+cfn=(40) ZwWaitForSingleObject
+calls=1 0
+0 139648 428
+
+ob=(4)
+fl=(2)
+fn=(41) [00007FFD1F4D9F1F]
+cob=(5)
+cfl=(1)
+cfn=(42) NtDeviceIoControlFile
+calls=2 0
+0 7951 24
+
+ob=(4)
+fl=(1)
+fn=(43) NSPStartup
+cob=(4)
+cfl=(2)
+cfn=(39)
+calls=1 0
+0 139648 428
+
+ob=(3)
+fl=(1)
+fn=(19)
+0 2399691 7355
+
+ob=(3)
+fl=(1)
+fn=(18)
+0 26498826 81215
+
+ob=(3)
+fl=(1)
+fn=(37)
+0 3986 12
+
+ob=(3)
+fl=(1)
+fn=(32)
+0 295164379 904632
+
+ob=(3)
+fl=(1)
+fn=(30)
+0 855283 2621
+
+ob=(3)
+fl=(1)
+fn=(36)
+0 582434 1785
+
+ob=(3)
+fl=(1)
+fn=(38)
+0 3982 12
+
+ob=(2)
+fl=(1)
+fn=(5)
+cob=(4)
+cfl=(2)
+cfn=(41)
+calls=2 0
+0 7951 24
+
+ob=(2)
+fl=(1)
+fn=(7)
+cob=(4)
+cfl=(1)
+cfn=(43)
+calls=1 0
+0 139648 428
+
+ob=(5)
+fl=(1)
+fn=(40)
+0 139648 428
+
+ob=(5)
+fl=(1)
+fn=(42)
+0 7951 24
