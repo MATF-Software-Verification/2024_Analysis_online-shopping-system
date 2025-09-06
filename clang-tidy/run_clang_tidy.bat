@@ -1,45 +1,35 @@
 @echo off
-REM ============================================
-REM Skripta za pokretanje clang-tidy nad Server i Client direktorijumima
-REM i generisanje HTML izveštaja
-REM ============================================
+setlocal enabledelayedexpansion
 
-REM Putanja do submodula 
-set SUBMODULE_DIR=..\online-shopping-system\
+set "SUBMODULE_DIR=..\online-shopping-system"
+set "OUTPUT_FILE=clang_tidy_report.txt"
+set "OUTPUT_HTML=clang_tidy_report.html"
 
-REM Fajl gde ce se sacuvati tekstualni rezultati
-set OUTPUT_FILE=clang_tidy_report.txt
+if exist "%OUTPUT_FILE%" del "%OUTPUT_FILE%"
+if exist "%OUTPUT_HTML%" del "%OUTPUT_HTML%"
 
-REM Fajl gde ce se sacuvati HTML izvestaj
-set OUTPUT_HTML=clang_tidy_report.html
+set "TIDY_CHECKS=clang-diagnostic-*,clang-analyzer-*,modernize-use-auto,modernize-use-nullptr,modernize-use-noexcept,modernize-use-emplace,modernize-use-emplace-back,modernize-loop-convert,modernize-use-using"
+set "HEADER_FILTER=.*(\\Server|\\Client).*"
 
-REM Brisemo prethodne fajlove ako postoje
-if exist %OUTPUT_FILE% del %OUTPUT_FILE%
-if exist %OUTPUT_HTML% del %OUTPUT_HTML%
+REM TODO: PRILAGODI PUTANJE ispod tvom Windows SDK/MSVC okruzenju!
+set "WINSDK_INC=C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0"
+set "MSVC_INC=C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.16.27023\include"
 
-REM Specifične opcije za clang-tidy
-REM -header-filter filtrira samo fajlove unutar SUBMODULE_DIR (Server i Client)
-set CLANG_TIDY_OPTIONS=-checks=clang-diagnostic-*,clang-analyzer-*,modernize-use-auto,modernize-use-nullptr,modernize-use-noexcept,modernize-use-emplace,modernize-use-emplace-back,modernize-loop-convert,modernize-use-using -header-filter=".*(Server|Client).*"
+set "COMMON_ARGS=-std=c++17 -DWIN32 -D_UNICODE -DUNICODE -fms-compatibility -EHsc"
+set "INCLUDES=-I"%WINSDK_INC%\ucrt" -I"%WINSDK_INC%\shared" -I"%WINSDK_INC%\um" -I"%WINSDK_INC%\winrt" -I"%MSVC_INC%""
 
-echo Pokrecem clang-tidy analizu...
+echo Pokrecem clang-tidy (fallback nacin, bez compile_commands) ...
 
-REM Rekurzivno analiziramo sve .cpp i .h fajlove u Server i Client
-for /R %SUBMODULE_DIR%\Server %%f in (*.cpp *.h) do (
-    echo [Processing] %%f
-    clang-tidy "%%f" %CLANG_TIDY_OPTIONS% -- -I"%SUBMODULE_DIR%\Server\Headers" >> %OUTPUT_FILE% 2>&1
+for /R "%SUBMODULE_DIR%\Server" %%f in (*.cpp) do (
+  echo [Processing] %%f
+  clang-tidy "%%f" -checks="%TIDY_CHECKS%" -header-filter="%HEADER_FILTER%" -- %COMMON_ARGS% %INCLUDES% -I"%SUBMODULE_DIR%\Server\Headers" >> "%OUTPUT_FILE%" 2>&1
 )
 
-for /R %SUBMODULE_DIR%\Client %%f in (*.cpp *.h) do (
-    echo [Processing] %%f
-    clang-tidy "%%f" %CLANG_TIDY_OPTIONS% -- -I"%SUBMODULE_DIR%\Client\Headers" >> %OUTPUT_FILE% 2>&1
+for /R "%SUBMODULE_DIR%\Client" %%f in (*.cpp) do (
+  echo [Processing] %%f
+  clang-tidy "%%f" -checks="%TIDY_CHECKS%" -header-filter="%HEADER_FILTER%" -- %COMMON_ARGS% %INCLUDES% -I"%SUBMODULE_DIR%\Client\Headers" >> "%OUTPUT_FILE%" 2>&1
 )
 
-echo Analiza zavrsena. Rezultati su u fajlu %OUTPUT_FILE%
-
-REM Generisanje HTML izvestaja iz txt fajla koristeci pandoc
-echo Generisem HTML izvestaj...
-pandoc %OUTPUT_FILE% -o %OUTPUT_HTML%
-
-echo HTML izvestaj sacuvan u %OUTPUT_HTML%
-
-pause
+pandoc "%OUTPUT_FILE%" -o "%OUTPUT_HTML%" 2>nul
+echo Gotovo. Rezultati: %OUTPUT_FILE%
+endlocal
