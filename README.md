@@ -88,14 +88,11 @@ run_cppcheck.bat
 Doxygen je alat koji omogućava **automatsko generisanje dokumentacije** iz komentara unutar izvornog koda.  
 Dokumentacija može biti generisana u **HTML** i **LaTeX/PDF** formatu i sadrži:  
 - Spisak klasa, funkcija i metoda.  
-- Hijerarhiju nasleđivanja.  
-- Dijagrame poziva (uz Graphviz).  
+- Hijerarhiju nasleđivanja.   
 
 #### Instalacija (Windows)  
 1. Preuzeti instalacioni fajl sa zvanične stranice: [https://www.doxygen.nl/download.html](https://www.doxygen.nl/download.html).  
-2. Instalirati Doxygen (GUI + CLI).  
-3. (Opcionalno) preuzeti i instalirati **Graphviz** sa [https://graphviz.org/download/](https://graphviz.org/download/) za generisanje dijagrama klasa i poziva.  
-4. Dodati `doxygen.exe` i `dot.exe` (iz Graphviz-a) u **PATH**.  
+2. Instalirati Doxygen (GUI + CLI). 
 
 #### Konfiguracija  
 1. Generisati osnovni konfiguracioni fajl komandom:  
