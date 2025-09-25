@@ -84,26 +84,77 @@ Pokretanje analize:
 run_cppcheck.bat
 ```
 
+
 ### 3. **Doxygen (generisanje dokumentacije)**  
 Doxygen je alat koji omogućava **automatsko generisanje dokumentacije** iz komentara unutar izvornog koda.  
 Dokumentacija može biti generisana u **HTML** i **LaTeX/PDF** formatu i sadrži:  
 - Spisak klasa, funkcija i metoda.  
-- Hijerarhiju nasleđivanja.   
+- Hijerarhiju nasleđivanja.  
+- Dijagrame toka funkcija (Call i Caller grafove, uz Graphviz).  
 
-#### Instalacija (Windows)  
-1. Preuzeti instalacioni fajl sa zvanične stranice: [https://www.doxygen.nl/download.html](https://www.doxygen.nl/download.html).  
-2. Instalirati Doxygen (GUI + CLI). 
+Koristi se kako bi se projekat lakše razumeo, održavao i nadograđivao, posebno kod većih i složenijih sistema.
 
-#### Konfiguracija  
-1. Generisati osnovni konfiguracioni fajl komandom:  
+---
+
+#### **Instalacija (Windows)**  
+Za generisanje kompletne dokumentacije sa dijagramima potrebno je instalirati **Doxygen** i **Graphviz**.
+
+**1. Instalacija Doxygen-a**  
+1. Preuzeti instalacioni fajl sa zvanične stranice:  
+   [https://www.doxygen.nl/download.html](https://www.doxygen.nl/download.html)  
+2. Instalirati Doxygen.  
+3. Proveriti instalaciju komandom:  
    ```bash
-   doxygen -g Doxyfile
+   doxygen --version
    ```
-#### Pokretanje  
-Nakon podešavanja `Doxyfile`, alat se pokreće komandom:  
+
+**2. Instalacija Graphviz-a**  
+Graphviz je potreban za generisanje vizuelnih dijagrama (npr. Call Graph i Caller Graph).  
+1. Preuzeti sa: [https://graphviz.org/download/](https://graphviz.org/download/)  
+2. Instalirati aplikaciju.  
+3. Dodati putanju do `bin` direktorijuma u **PATH** promenljivu okruženja (npr. `C:\Program Files\Graphviz\bin`).  
+4. Proveriti instalaciju:  
+   ```bash
+   dot -V
+   ```
+
+---
+
+#### **Konfiguracija**
+
+Pre prvog pokretanja, potrebno je generisati osnovni konfiguracioni fajl komandnom linijom:
+```bash
+doxygen -g Doxyfile
+```
+
+Zatim otvoriti fajl `Doxyfile` i podesiti ključne parametre:  
+
+| Parametar | Vrednost | Objašnjenje |
+|------------|----------|-------------|
+| `PROJECT_NAME` | `"Online Shopping System"` | Naziv projekta prikazan u dokumentaciji. |
+| `OUTPUT_DIRECTORY` | `docs` *(opciono)* | Folder u koji će biti smeštena dokumentacija. |
+| `RECURSIVE` | `YES` | Uključuje sve poddirektorijume projekta. |
+| `GENERATE_HTML` | `YES` | Generiše HTML dokumentaciju. |
+| `GENERATE_LATEX` | `NO` | Isključuje PDF/LaTeX dokumentaciju (postaviti na YES ako je potreban PDF). |
+| `EXTRACT_ALL` | `YES` | Uključuje sve elemente čak i ako nisu dokumentovani. |
+| `EXTRACT_PRIVATE` | `YES` | Uključuje i privatne članove klasa. |
+| `HAVE_DOT` | `YES` | Aktivira Graphviz za generisanje dijagrama. |
+| `CALL_GRAPH` | `YES` | Prikazuje funkcije koje određena metoda poziva (Call Graph). |
+| `CALLER_GRAPH` | `YES` | Prikazuje funkcije koje pozivaju određenu metodu (Caller Graph). |
+| `GENERATE_TREEVIEW` | `YES` | Dodaje navigaciono stablo sa leve strane u HTML dokumentaciji. |
+
+> **Napomena:** Ako `HAVE_DOT` nije postavljen na `YES`, Graphviz neće biti korišćen i dijagrami neće biti generisani.
+
+---
+
+#### **Pokretanje**
+
+Nakon što je `Doxyfile` podešen, Doxygen se pokreće iz komandne linije jednostavnom komandom:
+
 ```bash
 doxygen Doxyfile
 ```
+
 ### 4. **Dr. Memory (dinamička analiza memorije)**  
 **Dr. Memory** je alat za analiziranje problema sa memorijom na Windows-u: curenja (`LEAK`), korišćenje neinicijalizovane memorije, invalidne pristupe (`INVALID read/write`), korišćenje nakon oslobađanja (`use-after-free`), dvostruko oslobađanje, itd.
 
